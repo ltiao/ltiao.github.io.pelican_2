@@ -35,5 +35,5 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 PLUGIN_PATHS = ['plugins']
-# PLUGINS = ['pdf']
-THEME = 'simple'
+
+THEME = 'themes/tiao-pelican-bootstrap3'
