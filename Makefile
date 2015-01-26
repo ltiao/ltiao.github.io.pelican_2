@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=cse.unsw.edu.au
 SSH_PORT=22
 SSH_USER=ctia193
-SSH_TARGET_DIR=/public_html
+SSH_TARGET_DIR=~/public_html
 
 S3_BUCKET=my_s3_bucket
 
