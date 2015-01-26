@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Louis Tiao</title>
+        <meta charset="utf-8" />
+        <link href="http://ltiao.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Louis Tiao Full Atom Feed" />
+        <link href="http://ltiao.github.io/feeds/yeah.atom.xml" type="application/atom+xml" rel="alternate" title="Louis Tiao Categories Atom Feed" />
+
+
+
+    <meta name="tags" contents="thats" />
+    <meta name="tags" contents="awesome" />
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://ltiao.github.io/">Louis Tiao <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://ltiao.github.io/drafts/my-super-post.html" rel="bookmark"
+         title="Permalink to Hosting Pelican site on Github: Best practices">Hosting Pelican site on Github: Best practices</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2010-10-03T10:20:00+02:00">
+      Sun 03 October 2010
+    </abbr>
+    <abbr class="modified" title="2010-10-04T18:40:00+02:00">
+      Mon 04 October 2010
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
+          <a class="url fn" href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <div class="section" id="starting-out">
+<h2>Starting out</h2>
+<ol class="arabic">
+<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
+<ul class="simple">
+<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
+</ul>
+</li>
+<li><p class="first">Clone the newly created repository:</p>
+<pre class="literal-block">
+$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
+</pre>
+</li>
+<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
+<tt class="docutils literal">virtualenvwrapper</tt>):</p>
+<pre class="literal-block">
+$ mkvirtualenv &lt;venv_name&gt;
+</pre>
+</li>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
+yet, then install Markdown as well):</p>
+<pre class="literal-block">
+$ pip install pelican markdown
+</pre>
+</li>
+<li><p class="first">Navigate to <tt class="docutils literal">&lt;site_root&gt;</tt> and execute the <tt class="docutils literal"><span class="pre">pelican-quickstart</span></tt>
+script:</p>
+<pre class="literal-block">
+$ cd &lt;site_root&gt;
+$ pelican-quickstart
+</pre>
+<p>and answer the prompts according to your needs. Presumably, you want
+to upload your website using GitHub Pages, else you wouldn't be here.
+Make sure you answer <tt class="docutils literal">y</tt> to generating a Fabfile/Makefile and to
+using Github pages.</p>
+<blockquote>
+<!-- This is how I answered the prompt. Commented out to hide -->
+<!-- sensitive information. -->
+<!-- Welcome to pelican-quickstart v3.5.0. -->
+<!-- This script will help you create a new Pelican-based website. -->
+<!-- Please answer the following questions so this script can generate the files -->
+<!-- needed by Pelican. -->
+<!-- > Where do you want to create your new web site? [.] -->
+<!-- > What will be the title of this web site? Louis Tiao -->
+<!-- > Who will be the author of this web site? Louis Tiao -->
+<!-- > What will be the default language of this web site? [en] -->
+<!-- > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) Y -->
+<!-- > What is your URL prefix? (see above example; no trailing slash) http://ltiao.github.io -->
+<!-- > Do you want to enable article pagination? (Y/n) Y -->
+<!-- > How many articles per page do you want? [10] 5 -->
+<!-- > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y -->
+<!-- > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) Y -->
+<!-- > Do you want to upload your website using FTP? (y/N) N -->
+<!-- > Do you want to upload your website using SSH? (y/N) y -->
+<!-- > What is the hostname of your SSH server? [localhost] cse.unsw.edu.au -->
+<!-- > What is the port of your SSH server? [22] -->
+<!-- > What is your username on that server? [root] ctia193 -->
+<!-- > Where do you want to put your web site on that server? [/var/www] ~/public_html -->
+<!-- > Do you want to upload your website using Dropbox? (y/N) N -->
+<!-- > Do you want to upload your website using S3? (y/N) N -->
+<!-- > Do you want to upload your website using Rackspace Cloud Files? (y/N) N -->
+<!-- > Do you want to upload your website using GitHub Pages? (y/N) y -->
+<!-- > Is this your personal page (username.github.io)? (y/N) y -->
+<!-- Done. Your new project is available at /Users/tiao/Dropbox/Projects/website -->
+</blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="source-control">
+<h2>Source control</h2>
+<p>If you're already familiar with Github Pages, you will will already know
+that content from the <tt class="docutils literal">master</tt> branch will be used to build and publish your
+GitHub Pages site. Read this <a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">article</a> if you have no idea what I'm talking
+about.</p>
+<div class="section" id="approach-1-the-octopress-approach">
+<h3>Approach #1: The Octopress Approach</h3>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal">git checkout <span class="pre">-b</span> source</tt></p>
+</li>
+<li><p class="first"><tt class="docutils literal">git add Makefile develop_server.sh fabfile.py pelicanconf.py publishconf.py</tt></p>
+</li>
+<li><p class="first">commit these files</p>
+</li>
+<li><p class="first"><tt class="docutils literal">git push origin source</tt></p>
+</li>
+<li><p class="first">create an article <tt class="docutils literal"><span class="pre">&lt;root&gt;/keyboard-review.md</span></tt>:</p>
+<pre class="literal-block">
+Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+
+Following is a review of my favorite mechanical keyboard.
+</pre>
+</li>
+<li><p class="first">make github</p>
+</li>
+</ol>
+</div>
+<div class="section" id="approach-2-git-submodule">
+<h3>Approach #2: Git Submodule</h3>
+<p>S</p>
+</div>
+</div>
+
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Louis Tiao</title>
+        <meta charset="utf-8" />
+        <link href="http://ltiao.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Louis Tiao Full Atom Feed" />
+        <link href="http://ltiao.github.io/feeds/python.atom.xml" type="application/atom+xml" rel="alternate" title="Louis Tiao Categories Atom Feed" />
+
+
+
+    <meta name="tags" contents="pelican" />
+    <meta name="tags" contents="pdf" />
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://ltiao.github.io/">Louis Tiao <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
+         title="Permalink to Generate PDFs from Pelican Articles">Generate PDFs from Pelican Articles</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2015-01-26T20:00:00+01:00">
+      Mon 26 January 2015
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>As of mid-2013, Pelican still advertised PDF generation of articles/pages
+as one of its <a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features">features</a>. However, the <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3">change log</a> indicates that this
+is no longer a core feature and has since become a Pelican plugin as of
+version 3.3.0 (2013-09-24), see <a class="reference external" href="https://github.com/getpelican/pelican/issues/1009">issue</a> for further discussion. Therefore, it was
+rather confounding to find the setting <tt class="docutils literal">PDF_GENERATOR</tt> to be listed in the
+<a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings">examples settings</a> of version 3.5.0, and of course, to no one's surprise,
+adding the setting <tt class="docutils literal">PDF_GENERATOR=True</tt> isn't going to do anything.</p>
+<p>If you have used <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a> before, then the solution should be obvious.
+Simply install the <tt class="docutils literal">pdf</tt> plugin from <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a>. I personally
+prefer to keep all plugins (and themes) in the <tt class="docutils literal">&lt;pelican_site_root&gt;</tt> directory,
+on the same level as the <tt class="docutils literal">pelicanconf.py</tt> settings file:</p>
+<pre class="literal-block">
+$ cd &lt;pelican_site_root&gt;
+$ mkdir plugins
+$ git clone https://github.com/getpelican/pelican-plugins.git plugins
+</pre>
+<p>Optionally, you can also add the repository as a submodule:</p>
+<pre class="literal-block">
+$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
+</pre>
+<p>or clone it anywhere else you like for that matter.</p>
+<p>Lastly, you simply need to add <tt class="docutils literal">plugins</tt> to <tt class="docutils literal">PLUGIN_PATHS</tt> and <tt class="docutils literal">pdf</tt>
+to <tt class="docutils literal">PLUGINS</tt>. The former will temporarily add <tt class="docutils literal">PLUGIN_PATHS</tt> to your
+system path so that the latter is importable:</p>
+<pre class="literal-block">
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['pdf']
+</pre>
+<p>When you run <tt class="docutils literal">pelican</tt> (or <tt class="docutils literal">make html</tt>), the generated PDFs of your articles
+will appear in the <tt class="docutils literal">pdf</tt> directory of the output directory, named according
+to the article slug with the <tt class="docutils literal">.pdf</tt> extension.</p>
+<p>In my opinion, the generated PDFs aren't exactly terrific, and the plugin could
+do with a little bit more work. Download this article as a PDF to see what I
+mean (how meta!)</p>
+<!-- Download the `PDF of this article`_ to see what I mean (how meta!) -->
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you happen to be using the <tt class="docutils literal">notmyidea</tt> theme, a link <em>get the pdf</em>
+will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt> to your settings
+(as of <a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html">commit a7ca52</a>).</p>
+</div>
+<!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf -->
+
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
