@@ -6,6 +6,8 @@ AUTHOR = u'Louis Tiao'
 SITENAME = u'Louis Tiao'
 SITEURL = ''
 
+# SITESUBTITLE = '(Computer Scientist) &and; (Software Engineer)'
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
@@ -37,3 +39,7 @@ DEFAULT_PAGINATION = 5
 PLUGIN_PATHS = ['plugins']
 
 THEME = 'themes/tiao-pelican-bootstrap3'
+BOOTSTRAP_USE_CDN = True
+BOOTSTRAP_THEME = 'yeti'
+
+BOOTSTRAP_FLAT = True

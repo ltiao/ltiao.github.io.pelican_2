@@ -63,4 +63,40 @@ will be tightly coupled with this particular Pelican project.
 Furthermore, I doubt I will be reusing this theme elsewhere, hence
 the reason I have organized it this way.
 
-  .. _pelican-bootstrap3 from DandyDev: https://github.com/DandyDev/pelican-bootstrap3
+Continuing on...
+================
+
+I almost start all of my projects with HTML5 Boilerplate, pre-configured
+with Bootstrap [#]_. Download, unzip it and move ``index.html`` to ``templates/``
+and the rest of the files to ``static/``::
+
+  $ unzip initializr-verekia-4.0.zip
+  $ mv initializr/index.html <pelican-site-root>/themes/<theme_name>/templates/boilerplate.html
+  $ mv initializr/* <pelican-site-root>/themes/<theme_name>/static
+
+Replace everything in the ``body`` tag between::
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+and::
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  ...
+
+with::
+  
+  {% block body %}{% endblock %}
+
+Now, create ``base.html``, inherit from ``boilerplate.html`` and begin designing::
+
+  $ cat >> base.html
+  {% extends "boilerplate.html" %}
+  {% block body %}
+  One fine body...
+  {% endbody %}
+
+.. _pelican-bootstrap3 from DandyDev: https://github.com/DandyDev/pelican-bootstrap3
+
+.. [#] Go to http://www.initializr.com/ and select `Bootstrap`.
