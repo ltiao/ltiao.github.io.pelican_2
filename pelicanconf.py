@@ -28,18 +28,24 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', '#'),
+		  ('Linkedin', '#'),
+          ('Facebook', '#'),
+          ('Instagram', '#'),
+          ('Github', '#'),)
 
 DEFAULT_PAGINATION = 5
+
+GOOGLE_ANALYTICS = 'UA-43722566-1'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
 PLUGIN_PATHS = ['plugins']
+# PLUGINS = ['twitter_bootstrap_rst_directives']
 
 THEME = 'themes/tiao-pelican-bootstrap3'
 BOOTSTRAP_USE_CDN = True
 BOOTSTRAP_THEME = 'yeti'
 
-BOOTSTRAP_FLAT = True
+# BOOTSTRAP_FLAT = True

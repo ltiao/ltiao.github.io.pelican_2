@@ -7,7 +7,6 @@ Customizing Pelican Themes
 :category: python
 :authors: Louis Tiao
 :summary: Setting up the Pelican environment for customized themes
-:status: draft
 
 I want to design and create most of the templates myself and use 
 Bootstrap 3. There seems to be an inexhaustible number of potentially 
