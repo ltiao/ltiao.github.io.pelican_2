@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-01-26T20:00:00+01:00</updated><entry><title>Generate PDFs from Pelican Articles</title><link href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="alternate"></link><updated>2015-01-26T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-26:generate-pdfs-from-pelican-articles.html</id><summary type="html">&lt;p&gt;As of mid-2013, Pelican still advertised PDF generation of articles/pages
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-01-28T00:00:00+01:00</updated><entry><title>Customizing Pelican Themes</title><link href="http://ltiao.github.io/customizing-pelican-themes.html" rel="alternate"></link><updated>2015-01-27T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-27:customizing-pelican-themes.html</id><summary type="html">&lt;p&gt;I want to design and create most of the templates myself and use
+Bootstrap 3. There seems to be an inexhaustible number of potentially
+useful features that can be supported in a theme, and rather than
+spending all my time coming up features I should support, I will
+simply fork the project &lt;a class="reference external" href="https://github.com/DandyDev/pelican-bootstrap3"&gt;pelican-bootstrap3 from DandyDev&lt;/a&gt;
+and basically reinvent it. Essentially, all that will remain the
+same are the features it will support.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create a &lt;tt class="docutils literal"&gt;themes&lt;/tt&gt; directory:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd &amp;lt;pelican-site-root&amp;gt;
+$ mkdir themes
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Fork &lt;a class="reference external" href="https://github.com/DandyDev/pelican-bootstrap3"&gt;https://github.com/DandyDev/pelican-bootstrap3&lt;/a&gt; and clone
+into &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;/themes&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd themes
+$ git clone https://github.com/ltiao/pelican-bootstrap3
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In a previous project, I would add this repository as a submodule
+but I now realized there is no compelling reason for doing this.
+The theme can actually exist independently of my Pelican project
+files and not be married to this particular project. In fact, I
+didn't even need to create the &lt;tt class="docutils literal"&gt;themes&lt;/tt&gt; subdirectory and clone
+the repository into it - there are so many ways of incorporating
+themes into Pelican, I may as well document it here for posterity.&lt;/p&gt;
+&lt;div class="section" id="intermezzo"&gt;
+&lt;h2&gt;Intermezzo&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Provide the theme path to &lt;tt class="docutils literal"&gt;pelican&lt;/tt&gt; in the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-t&lt;/span&gt;&lt;/tt&gt; or
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--theme-path&lt;/span&gt;&lt;/tt&gt; argument. Path can be relative to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Provide the theme path in the &lt;tt class="docutils literal"&gt;THEME&lt;/tt&gt; variable in the settings
+file. Path can be relative to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Install the theme using &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-themes&lt;/span&gt;&lt;/tt&gt; by supplying the
+theme path in either the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-i&lt;/span&gt;&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-s&lt;/span&gt;&lt;/tt&gt; argument. Again, path
+can be relative to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;&lt;/span&gt;&lt;/tt&gt;. The former copies
+the theme while the later creates a symbolic link.&lt;/p&gt;
+&lt;p&gt;The theme should now appear the themes list &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-themes&lt;/span&gt; &lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/tt&gt;
+and you should now be able to use this theme with approach
+1 or 2 by simply supplying the theme name rather than the path.&lt;/p&gt;
+&lt;p&gt;Use &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-themes&lt;/span&gt; &lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/tt&gt; to remove the theme.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If the theme is under development, then using symlinks with the 3rd
+method is recommended. However, since I have already cloned the repo
+as a descendant of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;&lt;/span&gt;&lt;/tt&gt;, this may be redundant.
+Otherwise, if the theme lives outside of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;pelican-site-root&amp;gt;&lt;/span&gt;&lt;/tt&gt;
+hierarchy, this is highly recommended. I anticipate that this theme
+will be tightly coupled with this particular Pelican project.
+Furthermore, I doubt I will be reusing this theme elsewhere, hence
+the reason I have organized it this way.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="continuing-on"&gt;
+&lt;h2&gt;Continuing on...&lt;/h2&gt;
+&lt;p&gt;I almost start all of my projects with HTML5 Boilerplate, pre-configured
+with Bootstrap &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt;. Download, unzip it and move &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;templates/&lt;/tt&gt;
+and the rest of the files to &lt;tt class="docutils literal"&gt;static/&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ unzip initializr-verekia-4.0.zip
+$ mv initializr/index.html &amp;lt;pelican-site-root&amp;gt;/themes/&amp;lt;theme_name&amp;gt;/templates/boilerplate.html
+$ mv initializr/* &amp;lt;pelican-site-root&amp;gt;/themes/&amp;lt;theme_name&amp;gt;/static
+&lt;/pre&gt;
+&lt;p&gt;Replace everything in the &lt;tt class="docutils literal"&gt;body&lt;/tt&gt; tag between:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;lt;!--[if lt IE 7]&amp;gt;
+    &amp;lt;p class=&amp;quot;browsehappy&amp;quot;&amp;gt;You are using an &amp;lt;strong&amp;gt;outdated&amp;lt;/strong&amp;gt; browser. Please &amp;lt;a href=&amp;quot;http://browsehappy.com/&amp;quot;&amp;gt;upgrade your browser&amp;lt;/a&amp;gt; to improve your experience.&amp;lt;/p&amp;gt;
+&amp;lt;![endif]--&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;and:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;lt;script src=&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+...
+&lt;/pre&gt;
+&lt;p&gt;with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+{% block body %}{% endblock %}
+&lt;/pre&gt;
+&lt;p&gt;Now, create &lt;tt class="docutils literal"&gt;base.html&lt;/tt&gt;, inherit from &lt;tt class="docutils literal"&gt;boilerplate.html&lt;/tt&gt; and begin designing:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat &amp;gt;&amp;gt; base.html
+{% extends &amp;quot;boilerplate.html&amp;quot; %}
+{% block body %}
+One fine body...
+{% endbody %}
+&lt;/pre&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Go to &lt;a class="reference external" href="http://www.initializr.com/"&gt;http://www.initializr.com/&lt;/a&gt; and select &lt;cite&gt;Bootstrap&lt;/cite&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</summary><category term="pelican"></category><category term="themes"></category></entry><entry><title>Generate PDFs from Pelican Articles</title><link href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="alternate"></link><updated>2015-01-28T00:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-26:generate-pdfs-from-pelican-articles.html</id><summary type="html">&lt;p&gt;As of mid-2013, Pelican still advertised PDF generation of articles/pages
 as one of its &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features"&gt;features&lt;/a&gt;. However, the &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3"&gt;change log&lt;/a&gt; indicates that this
 is no longer a core feature and has since become a Pelican plugin as of
 version 3.3.0 (2013-09-24), see &lt;a class="reference external" href="https://github.com/getpelican/pelican/issues/1009"&gt;issue&lt;/a&gt; for further discussion. Therefore, it was
@@ -41,4 +138,107 @@ will appear by simply adding &lt;tt class="docutils literal"&gt;PDF_PROCESSOR=Tr
 (as of &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html"&gt;commit a7ca52&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf --&gt;
-</summary><category term="pelican"></category><category term="pdf"></category></entry></feed>
+</summary><category term="pelican"></category><category term="pdf"></category></entry><entry><title>Here is a personal post of something interesting</title><link href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html" rel="alternate"></link><updated>2015-01-28T00:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-26:here-is-a-personal-post-of-something-interesting.html</id><summary type="html"></summary><category term="pelican"></category><category term="pdf"></category></entry><entry><title>Hosting Pelican site on Github: Best practices</title><link href="http://ltiao.github.io/my-super-post.html" rel="alternate"></link><updated>2010-10-04T18:40:00+02:00</updated><author><name>Alexis Metaireau</name></author><id>tag:ltiao.github.io,2010-10-03:my-super-post.html</id><summary type="html">&lt;div class="section" id="starting-out"&gt;
+&lt;h2&gt;Starting out&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create a new git repository at Github: &lt;a class="reference external" href="https://github.com/new"&gt;https://github.com/new&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add Python to &lt;tt class="docutils literal"&gt;.gitignore&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Clone the newly created repository:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ git clone &amp;lt;repo_https_clone_url&amp;gt; &amp;lt;site_root&amp;gt;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt; (command only works if you have
+&lt;tt class="docutils literal"&gt;virtualenvwrapper&lt;/tt&gt;):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ mkvirtualenv &amp;lt;venv_name&amp;gt;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Install &lt;tt class="docutils literal"&gt;pelican&lt;/tt&gt; (if you're not confident with &lt;tt class="docutils literal"&gt;reStructuredText&lt;/tt&gt;
+yet, then install Markdown as well):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install pelican markdown
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Navigate to &lt;tt class="docutils literal"&gt;&amp;lt;site_root&amp;gt;&lt;/tt&gt; and execute the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-quickstart&lt;/span&gt;&lt;/tt&gt;
+script:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd &amp;lt;site_root&amp;gt;
+$ pelican-quickstart
+&lt;/pre&gt;
+&lt;p&gt;and answer the prompts according to your needs. Presumably, you want
+to upload your website using GitHub Pages, else you wouldn't be here.
+Make sure you answer &lt;tt class="docutils literal"&gt;y&lt;/tt&gt; to generating a Fabfile/Makefile and to
+using Github pages.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;!-- This is how I answered the prompt. Commented out to hide --&gt;
+&lt;!-- sensitive information. --&gt;
+&lt;!-- Welcome to pelican-quickstart v3.5.0. --&gt;
+&lt;!-- This script will help you create a new Pelican-based website. --&gt;
+&lt;!-- Please answer the following questions so this script can generate the files --&gt;
+&lt;!-- needed by Pelican. --&gt;
+&lt;!-- &gt; Where do you want to create your new web site? [.] --&gt;
+&lt;!-- &gt; What will be the title of this web site? Louis Tiao --&gt;
+&lt;!-- &gt; Who will be the author of this web site? Louis Tiao --&gt;
+&lt;!-- &gt; What will be the default language of this web site? [en] --&gt;
+&lt;!-- &gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) Y --&gt;
+&lt;!-- &gt; What is your URL prefix? (see above example; no trailing slash) http://ltiao.github.io --&gt;
+&lt;!-- &gt; Do you want to enable article pagination? (Y/n) Y --&gt;
+&lt;!-- &gt; How many articles per page do you want? [10] 5 --&gt;
+&lt;!-- &gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y --&gt;
+&lt;!-- &gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) Y --&gt;
+&lt;!-- &gt; Do you want to upload your website using FTP? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using SSH? (y/N) y --&gt;
+&lt;!-- &gt; What is the hostname of your SSH server? [localhost] cse.unsw.edu.au --&gt;
+&lt;!-- &gt; What is the port of your SSH server? [22] --&gt;
+&lt;!-- &gt; What is your username on that server? [root] ctia193 --&gt;
+&lt;!-- &gt; Where do you want to put your web site on that server? [/var/www] ~/public_html --&gt;
+&lt;!-- &gt; Do you want to upload your website using Dropbox? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using S3? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using GitHub Pages? (y/N) y --&gt;
+&lt;!-- &gt; Is this your personal page (username.github.io)? (y/N) y --&gt;
+&lt;!-- Done. Your new project is available at /Users/tiao/Dropbox/Projects/website --&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="source-control"&gt;
+&lt;h2&gt;Source control&lt;/h2&gt;
+&lt;p&gt;If you're already familiar with Github Pages, you will will already know
+that content from the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch will be used to build and publish your
+GitHub Pages site. Read this &lt;a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages"&gt;article&lt;/a&gt; if you have no idea what I'm talking
+about.&lt;/p&gt;
+&lt;div class="section" id="approach-1-the-octopress-approach"&gt;
+&lt;h3&gt;Approach #1: The Octopress Approach&lt;/h3&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git checkout &lt;span class="pre"&gt;-b&lt;/span&gt; source&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git add Makefile develop_server.sh fabfile.py pelicanconf.py publishconf.py&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;commit these files&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git push origin source&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;create an article &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;root&amp;gt;/keyboard-review.md&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+
+Following is a review of my favorite mechanical keyboard.
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;make github&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="approach-2-git-submodule"&gt;
+&lt;h3&gt;Approach #2: Git Submodule&lt;/h3&gt;
+&lt;p&gt;S&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="thats"></category><category term="awesome"></category></entry></feed>

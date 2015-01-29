@@ -71,7 +71,7 @@
               <li >
                   <a href="http://ltiao.github.io/category/python.html">Python</a>
               </li>
-              <li >
+              <li class="active">
                   <a href="http://ltiao.github.io/category/research.html">Research</a>
               </li>
           </ul>
@@ -83,18 +83,38 @@
           </div> <!-- /well -->
         </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
-<h1>Archives for Louis Tiao</h1>
-
-<dl>
-    <dt>Tue 27 January 2015</dt>
-    <dd><a href="http://ltiao.github.io/customizing-pelican-themes.html">Customizing Pelican Themes</a></dd>
-    <dt>Mon 26 January 2015</dt>
-    <dd><a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html">Generate PDFs from Pelican Articles</a></dd>
-    <dt>Mon 26 January 2015</dt>
-    <dd><a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html">Here is a personal post of something interesting</a></dd>
-    <dt>Sun 03 October 2010</dt>
-    <dd><a href="http://ltiao.github.io/my-super-post.html">Hosting Pelican site on Github: Best practices</a></dd>
-</dl>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>
+      <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
+         title="Permalink to Hosting Pelican site on Github: Best practices">
+      Hosting Pelican site on Github: Best practices
+      </a>
+    </h4>
+    <div class="section" id="starting-out">
+<h2>Starting out</h2>
+<ol class="arabic">
+<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
+<ul class="simple">
+<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
+</ul>
+</li>
+<li><p class="first">Clone the newly created repository:</p>
+<pre class="literal-block">
+$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
+</pre>
+</li>
+<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
+<tt class="docutils literal">virtualenvwrapper</tt>):</p>
+<pre class="literal-block">
+$ mkvirtualenv &lt;venv_name&gt;
+</pre>
+</li>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
+yet, then install Markdown ...</p></li></ol></div>
+  </div> <!-- /panel-body -->
+</div> <!-- /panel -->
+<hr>
         </div> <!-- /col -->
       </div> <!-- /row -->
       

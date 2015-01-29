@@ -86,9 +86,9 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h2>
-      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
-         title="Permalink to Generate PDFs from Pelican Articles">
-      Generate PDFs from Pelican Articles
+      <a href="http://ltiao.github.io/customizing-pelican-themes.html" rel="bookmark"
+         title="Permalink to Customizing Pelican Themes">
+      Customizing Pelican Themes
       </a>
     </h2>
     <div class="row">
@@ -107,13 +107,7 @@
       <div class="col-md-3">
        <dl>
           <dt style="text-transform: uppercase; font-size: 12px;">Published</dt>
-          <dd>Mon 26 January 2015</dd>
-        </dl> 
-      </div> <!-- /col -->
-      <div class="col-md-3">
-       <dl>
-          <dt style="text-transform: uppercase; font-size: 12px;">Modified</dt>
-          <dd>Wed 28 January 2015</dd>
+          <dd>Tue 27 January 2015</dd>
         </dl> 
       </div> <!-- /col -->
       <div class="col-md-3">
@@ -125,48 +119,103 @@
     </div> <!-- /row -->
     
     <div class="article-content">
-    <p>As of mid-2013, Pelican still advertised PDF generation of articles/pages
-as one of its <a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features">features</a>. However, the <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3">change log</a> indicates that this
-is no longer a core feature and has since become a Pelican plugin as of
-version 3.3.0 (2013-09-24), see <a class="reference external" href="https://github.com/getpelican/pelican/issues/1009">issue</a> for further discussion. Therefore, it was
-rather confounding to find the setting <tt class="docutils literal">PDF_GENERATOR</tt> to be listed in the
-<a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings">examples settings</a> of version 3.5.0, and of course, to no one's surprise,
-adding the setting <tt class="docutils literal">PDF_GENERATOR=True</tt> isn't going to do anything.</p>
-<p>If you have used <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a> before, then the solution should be obvious.
-Simply install the <tt class="docutils literal">pdf</tt> plugin from <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a>. I personally
-prefer to keep all plugins (and themes) in the <tt class="docutils literal">&lt;pelican_site_root&gt;</tt> directory,
-on the same level as the <tt class="docutils literal">pelicanconf.py</tt> settings file:</p>
+    <p>I want to design and create most of the templates myself and use
+Bootstrap 3. There seems to be an inexhaustible number of potentially
+useful features that can be supported in a theme, and rather than
+spending all my time coming up features I should support, I will
+simply fork the project <a class="reference external" href="https://github.com/DandyDev/pelican-bootstrap3">pelican-bootstrap3 from DandyDev</a>
+and basically reinvent it. Essentially, all that will remain the
+same are the features it will support.</p>
+<ol class="arabic">
+<li><p class="first">Create a <tt class="docutils literal">themes</tt> directory:</p>
 <pre class="literal-block">
-$ cd &lt;pelican_site_root&gt;
-$ mkdir plugins
-$ git clone https://github.com/getpelican/pelican-plugins.git plugins
+$ cd &lt;pelican-site-root&gt;
+$ mkdir themes
 </pre>
-<p>Optionally, you can also add the repository as a submodule:</p>
+</li>
+<li><p class="first">Fork <a class="reference external" href="https://github.com/DandyDev/pelican-bootstrap3">https://github.com/DandyDev/pelican-bootstrap3</a> and clone
+into <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;/themes</span></tt>:</p>
 <pre class="literal-block">
-$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
+$ cd themes
+$ git clone https://github.com/ltiao/pelican-bootstrap3
 </pre>
-<p>or clone it anywhere else you like for that matter.</p>
-<p>Lastly, you simply need to add <tt class="docutils literal">plugins</tt> to <tt class="docutils literal">PLUGIN_PATHS</tt> and <tt class="docutils literal">pdf</tt>
-to <tt class="docutils literal">PLUGINS</tt>. The former will temporarily add <tt class="docutils literal">PLUGIN_PATHS</tt> to your
-system path so that the latter is importable:</p>
-<pre class="literal-block">
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pdf']
-</pre>
-<p>When you run <tt class="docutils literal">pelican</tt> (or <tt class="docutils literal">make html</tt>), the generated PDFs of your articles
-will appear in the <tt class="docutils literal">pdf</tt> directory of the output directory, named according
-to the article slug with the <tt class="docutils literal">.pdf</tt> extension.</p>
-<p>In my opinion, the generated PDFs aren't exactly terrific, and the plugin could
-do with a little bit more work. Download this article as a PDF to see what I
-mean (how meta!)</p>
-<!-- Download the `PDF of this article`_ to see what I mean (how meta!) -->
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you happen to be using the <tt class="docutils literal">notmyidea</tt> theme, a link <em>get the pdf</em>
-will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt> to your settings
-(as of <a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html">commit a7ca52</a>).</p>
+</li>
+</ol>
+<p>In a previous project, I would add this repository as a submodule
+but I now realized there is no compelling reason for doing this.
+The theme can actually exist independently of my Pelican project
+files and not be married to this particular project. In fact, I
+didn't even need to create the <tt class="docutils literal">themes</tt> subdirectory and clone
+the repository into it - there are so many ways of incorporating
+themes into Pelican, I may as well document it here for posterity.</p>
+<div class="section" id="intermezzo">
+<h2>Intermezzo</h2>
+<ol class="arabic">
+<li><p class="first">Provide the theme path to <tt class="docutils literal">pelican</tt> in the <tt class="docutils literal"><span class="pre">-t</span></tt> or
+<tt class="docutils literal"><span class="pre">--theme-path</span></tt> argument. Path can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>.</p>
+</li>
+<li><p class="first">Provide the theme path in the <tt class="docutils literal">THEME</tt> variable in the settings
+file. Path can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>.</p>
+</li>
+<li><p class="first">Install the theme using <tt class="docutils literal"><span class="pre">pelican-themes</span></tt> by supplying the
+theme path in either the <tt class="docutils literal"><span class="pre">-i</span></tt> or <tt class="docutils literal"><span class="pre">-s</span></tt> argument. Again, path
+can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>. The former copies
+the theme while the later creates a symbolic link.</p>
+<p>The theme should now appear the themes list <tt class="docutils literal"><span class="pre">pelican-themes</span> <span class="pre">-l</span></tt>
+and you should now be able to use this theme with approach
+1 or 2 by simply supplying the theme name rather than the path.</p>
+<p>Use <tt class="docutils literal"><span class="pre">pelican-themes</span> <span class="pre">-r</span></tt> to remove the theme.</p>
+</li>
+</ol>
+<p>If the theme is under development, then using symlinks with the 3rd
+method is recommended. However, since I have already cloned the repo
+as a descendant of <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>, this may be redundant.
+Otherwise, if the theme lives outside of the <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>
+hierarchy, this is highly recommended. I anticipate that this theme
+will be tightly coupled with this particular Pelican project.
+Furthermore, I doubt I will be reusing this theme elsewhere, hence
+the reason I have organized it this way.</p>
 </div>
-<!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf -->
+<div class="section" id="continuing-on">
+<h2>Continuing on...</h2>
+<p>I almost start all of my projects with HTML5 Boilerplate, pre-configured
+with Bootstrap <a class="footnote-reference" href="#id2" id="id1">[1]</a>. Download, unzip it and move <tt class="docutils literal">index.html</tt> to <tt class="docutils literal">templates/</tt>
+and the rest of the files to <tt class="docutils literal">static/</tt>:</p>
+<pre class="literal-block">
+$ unzip initializr-verekia-4.0.zip
+$ mv initializr/index.html &lt;pelican-site-root&gt;/themes/&lt;theme_name&gt;/templates/boilerplate.html
+$ mv initializr/* &lt;pelican-site-root&gt;/themes/&lt;theme_name&gt;/static
+</pre>
+<p>Replace everything in the <tt class="docutils literal">body</tt> tag between:</p>
+<pre class="literal-block">
+&lt;!--[if lt IE 7]&gt;
+    &lt;p class=&quot;browsehappy&quot;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&quot;http://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
+&lt;![endif]--&gt;
+</pre>
+<p>and:</p>
+<pre class="literal-block">
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+...
+</pre>
+<p>with:</p>
+<pre class="literal-block">
+{% block body %}{% endblock %}
+</pre>
+<p>Now, create <tt class="docutils literal">base.html</tt>, inherit from <tt class="docutils literal">boilerplate.html</tt> and begin designing:</p>
+<pre class="literal-block">
+$ cat &gt;&gt; base.html
+{% extends &quot;boilerplate.html&quot; %}
+{% block body %}
+One fine body...
+{% endbody %}
+</pre>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Go to <a class="reference external" href="http://www.initializr.com/">http://www.initializr.com/</a> and select <cite>Bootstrap</cite>.</td></tr>
+</tbody>
+</table>
+</div>
 
     </div> <!-- /article-content -->
   </div> <!-- /panel-body -->

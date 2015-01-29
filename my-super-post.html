@@ -68,10 +68,10 @@
               <li >
                   <a href="http://ltiao.github.io/category/personal.html">Personal</a>
               </li>
-              <li class="active">
+              <li >
                   <a href="http://ltiao.github.io/category/python.html">Python</a>
               </li>
-              <li >
+              <li class="active">
                   <a href="http://ltiao.github.io/category/research.html">Research</a>
               </li>
           </ul>
@@ -86,9 +86,9 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h2>
-      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
-         title="Permalink to Generate PDFs from Pelican Articles">
-      Generate PDFs from Pelican Articles
+      <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
+         title="Permalink to Hosting Pelican site on Github: Best practices">
+      Hosting Pelican site on Github: Best practices
       </a>
     </h2>
     <div class="row">
@@ -98,7 +98,10 @@
           <dd>
             <ul class="list-inline">
               <li>
-                  <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
+                  <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
+              </li>
+              <li>
+                  <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
               </li>
             </ul>
           </dd>
@@ -107,66 +110,127 @@
       <div class="col-md-3">
        <dl>
           <dt style="text-transform: uppercase; font-size: 12px;">Published</dt>
-          <dd>Mon 26 January 2015</dd>
+          <dd>Sun 03 October 2010</dd>
         </dl> 
       </div> <!-- /col -->
       <div class="col-md-3">
        <dl>
           <dt style="text-transform: uppercase; font-size: 12px;">Modified</dt>
-          <dd>Wed 28 January 2015</dd>
+          <dd>Mon 04 October 2010</dd>
         </dl> 
       </div> <!-- /col -->
       <div class="col-md-3">
        <dl>
           <dt style="text-transform: uppercase; font-size: 12px;">Category</dt>
-          <dd>Python</dd>
+          <dd>Research</dd>
         </dl> 
       </div> <!-- /col -->
     </div> <!-- /row -->
     
     <div class="article-content">
-    <p>As of mid-2013, Pelican still advertised PDF generation of articles/pages
-as one of its <a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features">features</a>. However, the <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3">change log</a> indicates that this
-is no longer a core feature and has since become a Pelican plugin as of
-version 3.3.0 (2013-09-24), see <a class="reference external" href="https://github.com/getpelican/pelican/issues/1009">issue</a> for further discussion. Therefore, it was
-rather confounding to find the setting <tt class="docutils literal">PDF_GENERATOR</tt> to be listed in the
-<a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings">examples settings</a> of version 3.5.0, and of course, to no one's surprise,
-adding the setting <tt class="docutils literal">PDF_GENERATOR=True</tt> isn't going to do anything.</p>
-<p>If you have used <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a> before, then the solution should be obvious.
-Simply install the <tt class="docutils literal">pdf</tt> plugin from <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a>. I personally
-prefer to keep all plugins (and themes) in the <tt class="docutils literal">&lt;pelican_site_root&gt;</tt> directory,
-on the same level as the <tt class="docutils literal">pelicanconf.py</tt> settings file:</p>
+    <div class="section" id="starting-out">
+<h2>Starting out</h2>
+<ol class="arabic">
+<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
+<ul class="simple">
+<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
+</ul>
+</li>
+<li><p class="first">Clone the newly created repository:</p>
 <pre class="literal-block">
-$ cd &lt;pelican_site_root&gt;
-$ mkdir plugins
-$ git clone https://github.com/getpelican/pelican-plugins.git plugins
+$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
 </pre>
-<p>Optionally, you can also add the repository as a submodule:</p>
+</li>
+<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
+<tt class="docutils literal">virtualenvwrapper</tt>):</p>
 <pre class="literal-block">
-$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
+$ mkvirtualenv &lt;venv_name&gt;
 </pre>
-<p>or clone it anywhere else you like for that matter.</p>
-<p>Lastly, you simply need to add <tt class="docutils literal">plugins</tt> to <tt class="docutils literal">PLUGIN_PATHS</tt> and <tt class="docutils literal">pdf</tt>
-to <tt class="docutils literal">PLUGINS</tt>. The former will temporarily add <tt class="docutils literal">PLUGIN_PATHS</tt> to your
-system path so that the latter is importable:</p>
+</li>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
+yet, then install Markdown as well):</p>
 <pre class="literal-block">
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pdf']
+$ pip install pelican markdown
 </pre>
-<p>When you run <tt class="docutils literal">pelican</tt> (or <tt class="docutils literal">make html</tt>), the generated PDFs of your articles
-will appear in the <tt class="docutils literal">pdf</tt> directory of the output directory, named according
-to the article slug with the <tt class="docutils literal">.pdf</tt> extension.</p>
-<p>In my opinion, the generated PDFs aren't exactly terrific, and the plugin could
-do with a little bit more work. Download this article as a PDF to see what I
-mean (how meta!)</p>
-<!-- Download the `PDF of this article`_ to see what I mean (how meta!) -->
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you happen to be using the <tt class="docutils literal">notmyidea</tt> theme, a link <em>get the pdf</em>
-will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt> to your settings
-(as of <a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html">commit a7ca52</a>).</p>
+</li>
+<li><p class="first">Navigate to <tt class="docutils literal">&lt;site_root&gt;</tt> and execute the <tt class="docutils literal"><span class="pre">pelican-quickstart</span></tt>
+script:</p>
+<pre class="literal-block">
+$ cd &lt;site_root&gt;
+$ pelican-quickstart
+</pre>
+<p>and answer the prompts according to your needs. Presumably, you want
+to upload your website using GitHub Pages, else you wouldn't be here.
+Make sure you answer <tt class="docutils literal">y</tt> to generating a Fabfile/Makefile and to
+using Github pages.</p>
+<blockquote>
+<!-- This is how I answered the prompt. Commented out to hide -->
+<!-- sensitive information. -->
+<!-- Welcome to pelican-quickstart v3.5.0. -->
+<!-- This script will help you create a new Pelican-based website. -->
+<!-- Please answer the following questions so this script can generate the files -->
+<!-- needed by Pelican. -->
+<!-- > Where do you want to create your new web site? [.] -->
+<!-- > What will be the title of this web site? Louis Tiao -->
+<!-- > Who will be the author of this web site? Louis Tiao -->
+<!-- > What will be the default language of this web site? [en] -->
+<!-- > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) Y -->
+<!-- > What is your URL prefix? (see above example; no trailing slash) http://ltiao.github.io -->
+<!-- > Do you want to enable article pagination? (Y/n) Y -->
+<!-- > How many articles per page do you want? [10] 5 -->
+<!-- > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y -->
+<!-- > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) Y -->
+<!-- > Do you want to upload your website using FTP? (y/N) N -->
+<!-- > Do you want to upload your website using SSH? (y/N) y -->
+<!-- > What is the hostname of your SSH server? [localhost] cse.unsw.edu.au -->
+<!-- > What is the port of your SSH server? [22] -->
+<!-- > What is your username on that server? [root] ctia193 -->
+<!-- > Where do you want to put your web site on that server? [/var/www] ~/public_html -->
+<!-- > Do you want to upload your website using Dropbox? (y/N) N -->
+<!-- > Do you want to upload your website using S3? (y/N) N -->
+<!-- > Do you want to upload your website using Rackspace Cloud Files? (y/N) N -->
+<!-- > Do you want to upload your website using GitHub Pages? (y/N) y -->
+<!-- > Is this your personal page (username.github.io)? (y/N) y -->
+<!-- Done. Your new project is available at /Users/tiao/Dropbox/Projects/website -->
+</blockquote>
+</li>
+</ol>
 </div>
-<!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf -->
+<div class="section" id="source-control">
+<h2>Source control</h2>
+<p>If you're already familiar with Github Pages, you will will already know
+that content from the <tt class="docutils literal">master</tt> branch will be used to build and publish your
+GitHub Pages site. Read this <a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">article</a> if you have no idea what I'm talking
+about.</p>
+<div class="section" id="approach-1-the-octopress-approach">
+<h3>Approach #1: The Octopress Approach</h3>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal">git checkout <span class="pre">-b</span> source</tt></p>
+</li>
+<li><p class="first"><tt class="docutils literal">git add Makefile develop_server.sh fabfile.py pelicanconf.py publishconf.py</tt></p>
+</li>
+<li><p class="first">commit these files</p>
+</li>
+<li><p class="first"><tt class="docutils literal">git push origin source</tt></p>
+</li>
+<li><p class="first">create an article <tt class="docutils literal"><span class="pre">&lt;root&gt;/keyboard-review.md</span></tt>:</p>
+<pre class="literal-block">
+Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+
+Following is a review of my favorite mechanical keyboard.
+</pre>
+</li>
+<li><p class="first">make github</p>
+</li>
+</ol>
+</div>
+<div class="section" id="approach-2-git-submodule">
+<h3>Approach #2: Git Submodule</h3>
+<p>S</p>
+</div>
+</div>
 
     </div> <!-- /article-content -->
   </div> <!-- /panel-body -->
