@@ -13,14 +13,11 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
-    <style type="text/css">
-      body { 
-        background: #F5F5F5; 
-      }
-    </style>
+    <style type="text/css"></style>
     
     <script src="http://ltiao.github.io/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
@@ -38,60 +35,78 @@
       <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
           <div class="page-header">
-            <h1>
-              Louis Tiao
-            </h1>
-          </div> <!-- /page-header -->
-        </div> <!-- /col -->
-      </div> <!-- /row -->
-    </div> <!-- /container -->
-
+            <ul class="nav nav-pills pull-right">
+<li>
+  <a href="http://ltiao.github.io/" >
+  	<i class="fa fa-home"></i>
+  	<span>Home</span>
+  </a>
+</li>              <li>
+                <a href="http://ltiao.github.io/archives.html">
+                  <i class="fa fa-archive"></i>
+                  <span>Archives</span>
+                </a>
+              </li>
+            </ul>
+            <h2 class="text-muted">Louis Tiao <small></small></h2>
+          </div> <!-- .page-header -->         
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-2">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a href="http://ltiao.github.io/">Home</a></li>
-              <li>
-                <a href="http://ltiao.github.io/pages/about.html">
-                 About
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/curriculum-vitae.html">
-                 Curriculum Vitae
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/projects.html">
-                 Projects
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/publications.html">
-                 Publications
-                </a>
-              </li>
-            <li class="disabled nav-header"><a>Articles</a></li>
-              <li >
-                  <a href="http://ltiao.github.io/category/personal.html">Personal</a>
-              </li>
-              <li class="active">
-                  <a href="http://ltiao.github.io/category/python.html">Python</a>
-              </li>
-              <li >
-                  <a href="http://ltiao.github.io/category/research.html">Research</a>
-              </li>
-          </ul> <!-- /nav -->
-          <hr>
-          <div class="well">
-            Something awesome.
-          </div> <!-- /well -->
-        </div> <!-- /col -->
+<ul class="nav nav-pills nav-stacked">
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/about.html">
+    <span>About</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/curriculum-vitae.html">
+    <span>Curriculum Vitae</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/projects.html">
+    <span>Projects</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/publications.html">
+    <span>Publications</span>
+  </a>
+</li>
+  <li class="disabled">
+    <a style="cursor: default;">
+      <strong>
+        <small>
+          <span class="text-uppercase">
+            Articles
+          </span>
+        </small>
+      </strong>
+    </a>
+  </li>
+  <li >
+    <a href="http://ltiao.github.io/category/personal.html">Personal</a>
+  </li>
+  <li class="active">
+    <a href="http://ltiao.github.io/category/python.html">Python</a>
+  </li>
+  <li >
+    <a href="http://ltiao.github.io/category/research.html">Research</a>
+  </li>
+</ul> <!-- /nav -->
+<hr>
+<div class="well">
+  drafts/customizing-pelican-themes.html
+</div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
     <h2>
-      <a href="http://ltiao.github.io/customizing-pelican-themes.html" rel="bookmark"
+      <a href="http://ltiao.github.io/drafts/customizing-pelican-themes.html" rel="bookmark"
          title="Permalink to Customizing Pelican Themes">
       Customizing Pelican Themes
       </a>
@@ -114,9 +129,9 @@
       <li>
         <small>
           <i class="fa fa-comments"></i>
-          <a href="http://ltiao.github.io/customizing-pelican-themes.html#disqus_thread"
+          <a href="http://ltiao.github.io/drafts/customizing-pelican-themes.html#disqus_thread"
              data-disqus-identifier="article-customizing-pelican-themes-01-2015">
-            Comments
+            Leave a comment
           </a>
         </small>
       </li>
@@ -228,29 +243,6 @@ One fine body...
   </div> <!-- /panel-body -->
   <ul class="list-group">
     <li class="list-group-item">
-<div class="comments">
-	<h3>Comments</h3>
-	<div id="disqus_thread"></div>
-
-
-	<script type="text/javascript">
-    var disqus_shortname = 'ltiao';
-    var disqus_identifier = 'article-customizing-pelican-themes-01-2015';
-    var disqus_url = 'http://ltiao.github.io/customizing-pelican-themes.html';
-
-	  var disqus_config = function () {
-	      this.language = "en";
-	  };
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
-</div>
     </li>
   </ul>
   <div class="panel-footer">Panel footer</div>
@@ -263,9 +255,9 @@ One fine body...
         <hr>
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
-<h4>Social</h4>
-<ul class="nav nav-pills">
+            <div class="col-md-6">
+              <h4 class="text-muted">Social</h4>
+              <ul class="nav nav-pills">
 	<li role="presentation">
     <a href="https://github.com/ltiao">
       <i class="fa fa-github fa-lg"></i> Github
@@ -291,9 +283,10 @@ One fine body...
       <i class="fa fa-envelope fa-lg"></i> Email
     </a>
   </li>
-</ul>            </div> <!-- /col -->
-            <div class="col-md-3">
-              <h4>Links</h4>
+              </ul>
+            </div> <!-- /col -->
+            <div class="col-md-6">
+              <h4 class="text-muted">Links</h4>
               <ul class="nav nav-pills">
                 <li role="presentation">
                   <a href="http://getpelican.com/">Pelican</a>
@@ -309,19 +302,14 @@ One fine body...
                 </li>
               </ul>
             </div> <!-- /col -->
-            <div class="col-md-6">
-              <blockquote class="blockquote-reverse">
-                <p>Research is what I'm doing when I don't know what I'm doing.</p>
-                <footer>Wernher von Braun</footer>
-              </blockquote>
-            </div> <!-- /col -->
           </div> <!-- /row -->
           <div class="row">
-            <p>&copy; Company 2014</p>
+            <div class="col-md-10">
+              <p>&copy; Louis Tiao </p>
+            </div>
           </div> <!-- /row -->
         </div> <!-- /container -->
       </footer>
-  
  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="http://ltiao.github.io/theme/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>

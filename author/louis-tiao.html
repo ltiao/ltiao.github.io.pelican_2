@@ -13,14 +13,11 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
-    <style type="text/css">
-      body { 
-        background: #F5F5F5; 
-      }
-    </style>
+    <style type="text/css"></style>
     
     <script src="http://ltiao.github.io/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
@@ -38,95 +35,161 @@
       <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
           <div class="page-header">
-            <h1>
-              Louis Tiao
-            </h1>
-          </div> <!-- /page-header -->
-        </div> <!-- /col -->
-      </div> <!-- /row -->
-    </div> <!-- /container -->
-
+            <ul class="nav nav-pills pull-right">
+<li>
+  <a href="http://ltiao.github.io/" >
+  	<i class="fa fa-home"></i>
+  	<span>Home</span>
+  </a>
+</li>              <li>
+                <a href="http://ltiao.github.io/archives.html">
+                  <i class="fa fa-archive"></i>
+                  <span>Archives</span>
+                </a>
+              </li>
+            </ul>
+            <h2 class="text-muted">Louis Tiao <small></small></h2>
+          </div> <!-- .page-header -->         
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-2">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a href="http://ltiao.github.io/">Home</a></li>
-              <li>
-                <a href="http://ltiao.github.io/pages/about.html">
-                 About
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/curriculum-vitae.html">
-                 Curriculum Vitae
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/projects.html">
-                 Projects
-                </a>
-              </li>
-              <li>
-                <a href="http://ltiao.github.io/pages/publications.html">
-                 Publications
-                </a>
-              </li>
-            <li class="disabled nav-header"><a>Articles</a></li>
-              <li >
-                  <a href="http://ltiao.github.io/category/personal.html">Personal</a>
-              </li>
-              <li >
-                  <a href="http://ltiao.github.io/category/python.html">Python</a>
-              </li>
-              <li >
-                  <a href="http://ltiao.github.io/category/research.html">Research</a>
-              </li>
-          </ul> <!-- /nav -->
-          <hr>
-          <div class="well">
-            Something awesome.
-          </div> <!-- /well -->
-        </div> <!-- /col -->
+<ul class="nav nav-pills nav-stacked">
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/about.html">
+    <span>About</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/curriculum-vitae.html">
+    <span>Curriculum Vitae</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/projects.html">
+    <span>Projects</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/publications.html">
+    <span>Publications</span>
+  </a>
+</li>
+  <li class="disabled">
+    <a style="cursor: default;">
+      <strong>
+        <small>
+          <span class="text-uppercase">
+            Articles
+          </span>
+        </small>
+      </strong>
+    </a>
+  </li>
+  <li >
+    <a href="http://ltiao.github.io/category/personal.html">Personal</a>
+  </li>
+  <li >
+    <a href="http://ltiao.github.io/category/python.html">Python</a>
+  </li>
+  <li >
+    <a href="http://ltiao.github.io/category/research.html">Research</a>
+  </li>
+</ul> <!-- /nav -->
+<hr>
+<div class="well">
+  author/louis-tiao.html
+</div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
     <h4>
-      <a href="http://ltiao.github.io/customizing-pelican-themes.html" rel="bookmark"
-         title="Permalink to Customizing Pelican Themes">
-      Customizing Pelican Themes
+      <a href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html" rel="bookmark"
+         title="Permalink to Pelican Tiao Bootstrap Theme: Mini-Documentation">
+      Pelican Tiao Bootstrap Theme: Mini-Documentation
       </a>
     </h4>
-    <p class="first last">Setting up the Pelican environment for customized themes</p>
+    <table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="36%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><tt class="docutils literal">DISPLAY_PAGES_ON_MENU</tt></th>
+<th class="head"><tt class="docutils literal">DISPLAY_PAGES_ON_SIDE</tt></th>
+<th class="head">Behavior</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>Not displayed at all</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>Displayed on Sidebar</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>Displayed on Menu</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>Displayed on Menu</td>
+</tr>
+</tbody>
+</table>
 
   </div> <!-- /panel-body -->
 </div> <!-- /panel -->
 <hr>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>
+      <a href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="bookmark"
+         title="Permalink to Upgrading all outdated pip packages">
+      Upgrading all outdated pip packages
+      </a>
+    </h4>
+    <p>Simply execute:</p>
+<pre class="literal-block">
+$ pip list --outdated | cut -d' ' -f1 | xargs pip install --upgrade
+</pre>
+<p>for versions of <tt class="docutils literal">pip</tt> that has the <tt class="docutils literal">list</tt> command, which I believe
+is 1.3+.</p>
 
-<nav class="text-center">
-	<ul class="pagination">
-    <li class="disabled">
-      <span>
-      <span aria-hidden="true">&laquo;</span> 
-      </span>
-    </li>
+  </div> <!-- /panel-body -->
+</div> <!-- /panel -->
+<hr>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>
+      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
+         title="Permalink to Generate PDFs from Pelican Articles">
+      Generate PDFs from Pelican Articles
+      </a>
+    </h4>
+    <p class="first last">How to generate PDFs from Pelican articles and pages</p>
 
-	  <li class="active">
-	    <a href="http://ltiao.github.io/author/louis-tiao.html">1 <span class="sr-only">(current)</span></a>
-	  </li>
-	  <li >
-	    <a href="http://ltiao.github.io/author/louis-tiao2.html">2 <span class="sr-only">(current)</span></a>
-	  </li>
-	  <li >
-	    <a href="http://ltiao.github.io/author/louis-tiao3.html">3 <span class="sr-only">(current)</span></a>
-	  </li>
+  </div> <!-- /panel-body -->
+</div> <!-- /panel -->
+<hr>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>
+      <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html" rel="bookmark"
+         title="Permalink to Here is a personal post of something interesting">
+      Here is a personal post of something interesting
+      </a>
+    </h4>
+    
+  </div> <!-- /panel-body -->
+</div> <!-- /panel -->
+<hr>
 
-	  <li >
-	    <a href="http://ltiao.github.io/author/louis-tiao2.html" aria-label="Next">
-	      <span aria-hidden="true">&raquo;</span>
-	    </a>
-	  </li>
-	</ul>
-</nav>
 
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -136,9 +199,9 @@
         <hr>
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
-<h4>Social</h4>
-<ul class="nav nav-pills">
+            <div class="col-md-6">
+              <h4 class="text-muted">Social</h4>
+              <ul class="nav nav-pills">
 	<li role="presentation">
     <a href="https://github.com/ltiao">
       <i class="fa fa-github fa-lg"></i> Github
@@ -164,9 +227,10 @@
       <i class="fa fa-envelope fa-lg"></i> Email
     </a>
   </li>
-</ul>            </div> <!-- /col -->
-            <div class="col-md-3">
-              <h4>Links</h4>
+              </ul>
+            </div> <!-- /col -->
+            <div class="col-md-6">
+              <h4 class="text-muted">Links</h4>
               <ul class="nav nav-pills">
                 <li role="presentation">
                   <a href="http://getpelican.com/">Pelican</a>
@@ -182,19 +246,14 @@
                 </li>
               </ul>
             </div> <!-- /col -->
-            <div class="col-md-6">
-              <blockquote class="blockquote-reverse">
-                <p>Research is what I'm doing when I don't know what I'm doing.</p>
-                <footer>Wernher von Braun</footer>
-              </blockquote>
-            </div> <!-- /col -->
           </div> <!-- /row -->
           <div class="row">
-            <p>&copy; Company 2014</p>
+            <div class="col-md-10">
+              <p>&copy; Louis Tiao </p>
+            </div>
           </div> <!-- /row -->
         </div> <!-- /container -->
       </footer>
-  
  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="http://ltiao.github.io/theme/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>

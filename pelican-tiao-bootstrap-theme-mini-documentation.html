@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Louis Tiao - Articles by Alexis Metaireau</title>
+    <title>Louis Tiao</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -91,7 +91,7 @@
   <li >
     <a href="http://ltiao.github.io/category/personal.html">Personal</a>
   </li>
-  <li >
+  <li class="active">
     <a href="http://ltiao.github.io/category/python.html">Python</a>
   </li>
   <li >
@@ -100,43 +100,110 @@
 </ul> <!-- /nav -->
 <hr>
 <div class="well">
-  author/alexis-metaireau.html
+  pelican-tiao-bootstrap-theme-mini-documentation.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-    <h4>
-      <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
-         title="Permalink to Hosting Pelican site on Github: Best practices">
-      Hosting Pelican site on Github: Best practices
+    <h2>
+      <a href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html" rel="bookmark"
+         title="Permalink to Pelican Tiao Bootstrap Theme: Mini-Documentation">
+      Pelican Tiao Bootstrap Theme: Mini-Documentation
       </a>
-    </h4>
-    <div class="section" id="starting-out">
-<h2>Starting out</h2>
-<ol class="arabic">
-<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
-<ul class="simple">
-<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
-</ul>
-</li>
-<li><p class="first">Clone the newly created repository:</p>
-<pre class="literal-block">
-$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
-</pre>
-</li>
-<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
-<tt class="docutils literal">virtualenvwrapper</tt>):</p>
-<pre class="literal-block">
-$ mkvirtualenv &lt;venv_name&gt;
-</pre>
-</li>
-<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
-yet, then install Markdown ...</p></li></ol></div>
+    </h2>
+    <ul class="list-inline">
+      <li>
+        <small>
+          <i class="fa fa-user"></i>
+          <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
+        </small>
+      </li>
+      <li>
+        <abbr title="Published">
+          <small>
+            <i class="fa fa-calendar"></i>
+            Sat 21 February 2015
+          </small>
+        </abbr>
+      </li>
+      <li>
+        <small>
+          <i class="fa fa-comments"></i>
+          <a href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html#disqus_thread"
+             data-disqus-identifier="article-pelican-tiao-bootstrap-theme-mini-documentation-02-2015">
+            Leave a comment
+          </a>
+        </small>
+      </li>
+    </ul>
+
+    
+
+    <div class="article-content">
+    <table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="36%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><tt class="docutils literal">DISPLAY_PAGES_ON_MENU</tt></th>
+<th class="head"><tt class="docutils literal">DISPLAY_PAGES_ON_SIDE</tt></th>
+<th class="head">Behavior</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>Not displayed at all</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>Displayed on Sidebar</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>Displayed on Menu</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>Displayed on Menu</td>
+</tr>
+</tbody>
+</table>
+
+    </div> <!-- /article-content -->
+
   </div> <!-- /panel-body -->
+  <ul class="list-group">
+    <li class="list-group-item">
+<div class="comments">
+	<h3>Comments</h3>
+	<div id="disqus_thread"></div>
+
+
+	<script type="text/javascript">
+    var disqus_shortname = 'ltiao';
+    var disqus_identifier = 'article-pelican-tiao-bootstrap-theme-mini-documentation-02-2015';
+    var disqus_url = 'http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html';
+
+	  var disqus_config = function () {
+	      this.language = "en";
+	  };
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
+</div>
+    </li>
+  </ul>
+  <div class="panel-footer">Panel footer</div>
 </div> <!-- /panel -->
-<hr>
-
-
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->

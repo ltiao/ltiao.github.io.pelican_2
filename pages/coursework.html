@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Louis Tiao - Articles by Alexis Metaireau</title>
+    <title>Louis Tiao</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -100,43 +100,131 @@
 </ul> <!-- /nav -->
 <hr>
 <div class="well">
-  author/alexis-metaireau.html
+  pages/coursework.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
 <div class="panel panel-default">
   <div class="panel-body">
-    <h4>
-      <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
-         title="Permalink to Hosting Pelican site on Github: Best practices">
-      Hosting Pelican site on Github: Best practices
+    <h2>
+      <a href="http://ltiao.github.io/pages/coursework.html" rel="bookmark"
+         title="Permalink to Coursework">
+      Coursework
       </a>
-    </h4>
-    <div class="section" id="starting-out">
-<h2>Starting out</h2>
-<ol class="arabic">
-<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
-<ul class="simple">
-<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
+    </h2>
+
+    
+
+    <div class="section" id="semester-2-2014">
+<h2>Semester 2 - 2014</h2>
+<ul>
+<li><p class="first">COMP3161 - Concepts of Programming Languages</p>
+<ul>
+<li><p class="first">Assignment 1</p>
+<p>Implemented an interpreter for &quot;MinHS&quot;, a functional
+programming language in the spirit of Haskell,
+fabricated for instructional purposes.</p>
+<p>Interpreter implemented in <strong>Haskell</strong>.</p>
+</li>
+<li><p class="first">Assignment 2</p>
+<p>Added type inference for MinHS by implementing
+Hindley-Milner type inference algorithm (aka &quot;Algorithm W&quot;.)</p>
+<p>(Implementation in <strong>Haskell</strong>.)</p>
+</li>
 </ul>
 </li>
-<li><p class="first">Clone the newly created repository:</p>
-<pre class="literal-block">
-$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
-</pre>
+<li><p class="first">COMP4418 - Knowledge Representation and Reasoning</p>
+<ul>
+<li><p class="first">Assignment 1</p>
+<ul>
+<li><p class="first">Exercises and proofs on propositional logic, first-order
+logic, and unit propagation rules.</p>
 </li>
-<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
-<tt class="docutils literal">virtualenvwrapper</tt>):</p>
-<pre class="literal-block">
-$ mkvirtualenv &lt;venv_name&gt;
-</pre>
+<li><p class="first">Implemented logician Hao Wang's automated theorem prover
+<a class="citation-reference" href="#hao1961" id="id1">[Hao1961]</a> based on Gentzen's Sequent Calculus.</p>
+<p>(Implementation in <strong>Prolog</strong>).</p>
 </li>
-<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
-yet, then install Markdown ...</p></li></ol></div>
+<li><p class="first">Analyzing the empirical hardness of SAT, with respect to
+clause-to-variable ratio.</p>
+<p>(Random SAT instance generation in <strong>Python</strong>, solved using
+<strong>pycosat</strong>, a Python interface for <strong>PicoSAT</strong> and analysis
+performed in <strong>IPython Notebook</strong> with <strong>pandas</strong> and <strong>matplotlib</strong>)</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Assignment 2</p>
+<ul>
+<li><p class="first">Solving automated planning problems using the classical representation
+and subsequently the Graphplan algorithm.</p>
+<p>(Visualization of Graphplan algorithm in <strong>tikz</strong>)</p>
+</li>
+<li><p class="first">Using Answer Set Programming to solve automated planning problems.</p>
+<p>(Using the <strong>Potassco</strong> toolkit for Answer Set Programming, specifically
+<strong>clingo</strong>, an amalgamation of <strong>gringo</strong> and <strong>clasp</strong>.)</p>
+</li>
+<li><p class="first">Modeling the actions, fluents and the situations of a automated planning
+problem domain in Situational Calculus and implementation in <strong>GOLOG</strong>,
+a <strong>Prolog</strong>-based logic programming language based on the situation calculus.</p>
+</li>
+<li><p class="first">Formalizing the game Morra in <strong>Game Description Language (GDL)</strong> to support
+General Game Playing systems.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Assignment 3</p>
+<p>Modeling and solving complex constraint satisfaction &amp; optimization
+problems in <strong>MiniZinc</strong>, a medium-level constraint modelling language
+developed by NICTA. Furthermore, benchmarking performance with respect
+various utility methods (i.e. objective functions), input sizes, and
+optimizing models using techniques such as symmetry breaking.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="hao1961" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Hao1961]</a></td><td><a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/j.1538-7305.1961.tb03975.x/abstract">http://onlinelibrary.wiley.com/doi/10.1002/j.1538-7305.1961.tb03975.x/abstract</a></td></tr>
+</tbody>
+</table>
+</div>
+
   </div> <!-- /panel-body -->
+  <div class="panel-footer">Panel footer</div>
 </div> <!-- /panel -->
-<hr>
-
-
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
