@@ -6,7 +6,7 @@ AUTHOR = u'Louis Tiao'
 SITENAME = u'Louis Tiao'
 SITEURL = ''
 
-# SITESUBTITLE = '(Computer Scientist) &and; (Software Engineer)'
+# SITESUBTITLE = u'刁啟純'
 
 PATH = 'content'
 
@@ -38,7 +38,7 @@ SOCIAL = (
 
 # SOCIAL = [(a, b) for a, b, _ in SOCIAL]
 
-DEFAULT_PAGINATION = 1
+DEFAULT_PAGINATION = 5
 
 DISQUS_SITENAME = 'ltiao'
 
@@ -58,7 +58,9 @@ PLUGIN_PATHS = ['plugins']
 # PLUGINS = ['twitter_bootstrap_rst_directives']
 
 THEME = 'themes/tiao-pelican-bootstrap3'
+
 BOOTSTRAP_USE_CDN = True
-BOOTSTRAP_THEME = 'yeti'
+# BOOTSTRAP_THEME = 'paper'
+
 # BOOTSTRAP_USE_PAGER = True
 BOOTSTRAP_FLAT = True

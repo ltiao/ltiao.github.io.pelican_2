@@ -2,4 +2,3 @@
 Curriculum Vitae
 ================
 
-Hi there.
