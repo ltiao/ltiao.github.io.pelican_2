@@ -6,7 +6,7 @@ AUTHOR = u'Louis Tiao'
 SITENAME = u'Louis Tiao'
 SITEURL = ''
 
-# SITESUBTITLE = u'刁啟純'
+SITESUBTITLE = u'Computer Science &middot; Math &middot; Programming'
 
 PATH = 'content'
 
@@ -55,7 +55,7 @@ GITHUB_URL = 'https://github.com/ltiao'
 #RELATIVE_URLS = True
 
 PLUGIN_PATHS = ['plugins']
-# PLUGINS = ['twitter_bootstrap_rst_directives']
+PLUGINS = ['extract_toc']
 
 THEME = 'themes/tiao-pelican'
 

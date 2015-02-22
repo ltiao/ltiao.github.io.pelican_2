@@ -2,3 +2,4 @@
 Curriculum Vitae
 ================
 
+:status: hidden
