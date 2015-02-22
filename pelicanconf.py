@@ -57,10 +57,10 @@ GITHUB_URL = 'https://github.com/ltiao'
 PLUGIN_PATHS = ['plugins']
 # PLUGINS = ['twitter_bootstrap_rst_directives']
 
-THEME = 'themes/tiao-pelican-bootstrap3'
+THEME = 'themes/tiao-pelican'
 
 BOOTSTRAP_USE_CDN = True
-# BOOTSTRAP_THEME = 'paper'
+BOOTSTRAP_THEME = 'yeti'
 
-# BOOTSTRAP_USE_PAGER = True
-BOOTSTRAP_FLAT = True
+BOOTSTRAP_USE_PAGER = True
+# BOOTSTRAP_FLAT = True

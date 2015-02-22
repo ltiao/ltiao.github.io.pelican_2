@@ -10,7 +10,7 @@ Pelican Tiao Bootstrap Theme: Mini-Documentation
 +---------------------------+---------------------------+----------------------+
 | ``DISPLAY_PAGES_ON_MENU`` | ``DISPLAY_PAGES_ON_SIDE`` |       Behavior       |
 +===========================+===========================+======================+
-| False                     | False                     | Not Displayed at all |
+| False                     | False                     | Not displayed at all |
 +---------------------------+---------------------------+----------------------+
 | False                     | True                      | Displayed on Sidebar |
 +---------------------------+---------------------------+----------------------+
