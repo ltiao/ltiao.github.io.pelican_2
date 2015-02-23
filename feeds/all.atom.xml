@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-02-05T20:00:00+01:00</updated><entry><title>Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply execute:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-02-22T22:00:00+01:00</updated><entry><title>Pelican Tiao Bootstrap Theme: Mini-Documentation</title><link href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html" rel="alternate"></link><updated>2015-02-22T22:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-22:pelican-tiao-bootstrap-theme-mini-documentation.html</id><summary type="html">&lt;div class="section" id="inspiration"&gt;
+&lt;h2&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;I liked how &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap"&gt;simple-bootstrap&lt;/a&gt; took Bootstrap's &lt;a class="reference external" href="http://getbootstrap.com/examples/jumbotron-narrow/"&gt;Jumbotron Narrow&lt;/a&gt;,
+to create a clean, minimalistic design. However, it might be overly
+simplistic and lacked the features of, say, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt; sports a lot of great features, but I dislike
+how little thought seems to have gone into the actual design. It
+looks like any another generic Bootstrap site.&lt;/p&gt;
+&lt;p&gt;The typography of &lt;a class="reference external" href="https://github.com/cpaulik/martin-pelican/"&gt;martin-pelican&lt;/a&gt; is very cool, and I especially
+like the white panel on the light grey background.&lt;/p&gt;
+&lt;p&gt;The same can be said of &lt;a class="reference external" href="https://github.com/blueicefield/pelican-blueidea"&gt;blueidea&lt;/a&gt;  which, as far as I can tell,
+is just a blue version of the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme that is shipped
+with Pelican.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://github.com/tbunnyman/pelican-chunk"&gt;chunk&lt;/a&gt; theme is neat in how it utilizes 2 columns to separate
+article content and metadata. The &lt;a class="reference external" href="https://github.com/porterjamesj/crowsfoot"&gt;crowsfoot&lt;/a&gt; header looks cool,
+but not much else can be said for its content presentation.&lt;/p&gt;
+&lt;p&gt;I quite like the footer in &lt;a class="reference external" href="https://github.com/PierrePaul/html5-dopetrope"&gt;html5-dopetrope&lt;/a&gt;, but don't like how
+articles are listed in a 1x3 format, side-by-side, horizonally.
+This would only be useful for photography and other visual posts,
+and not much else.&lt;/p&gt;
+&lt;p&gt;The themes &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/aboutwilson"&gt;aboutwilson&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/talha131/pelican-elegant"&gt;elegant&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/foundation-default-colours"&gt;foundation-default-colours&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/gum"&gt;gum&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/siovene/lannisport"&gt;Lannisport&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/gunchu/nikhil-theme"&gt;nikhil-theme&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/fle/pelican-simplegrey"&gt;simplegrey&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/fle/pelican-sober"&gt;sober&lt;/a&gt; are clean and neat
+but also seem slightly plain and uninspired.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="pelican"></category><category term="themes"></category><category term="bootstrap"></category><category term="documentation"></category></entry><entry><title>Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply execute:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ pip list --outdated | cut -d' ' -f1 | xargs pip install --upgrade
 &lt;/pre&gt;
