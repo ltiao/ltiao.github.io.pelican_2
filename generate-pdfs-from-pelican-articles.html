@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -93,52 +93,55 @@
   generate-pdfs-from-pelican-articles.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h2>
-      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
-         title="Permalink to Generate PDFs from Pelican Articles">
-      Generate PDFs from Pelican Articles
+<ul class="list-group">
+  <li class="list-group-item">
+<h3 class="list-group-item-heading">
+  <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
+     title="Permalink to Generate PDFs from Pelican Articles">
+  Generate PDFs from Pelican Articles
+  </a>
+</h3>
+
+<ul class="list-inline">
+  <li>
+    <small>
+      <i class="fa fa-user"></i>
+      <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
+    </small>
+  </li>
+  <li>
+    <abbr title="Published">
+      <small>
+        <i class="fa fa-calendar"></i>
+        Mon 26 January 2015
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <abbr title="Last modified">
+      <small>
+        <i class="fa fa-edit"></i>
+        Wed 28 January 2015
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <small>
+      <i class="fa fa-comments"></i>
+      <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html#disqus_thread"
+         data-disqus-identifier="article-generate-pdfs-from-pelican-articles-01-2015">
+        Leave a comment
       </a>
-    </h2>
-    <ul class="list-inline">
-      <li>
-        <small>
-          <i class="fa fa-user"></i>
-          <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
-        </small>
-      </li>
-      <li>
-        <abbr title="Published">
-          <small>
-            <i class="fa fa-calendar"></i>
-            Mon 26 January 2015
-          </small>
-        </abbr>
-      </li>
-      <li>
-        <abbr title="Last modified">
-          <small>
-            <i class="fa fa-edit"></i>
-            Wed 28 January 2015
-          </small>
-        </abbr>
-      </li>
-      <li>
-        <small>
-          <i class="fa fa-comments"></i>
-          <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html#disqus_thread"
-             data-disqus-identifier="article-generate-pdfs-from-pelican-articles-01-2015">
-            Leave a comment
-          </a>
-        </small>
-      </li>
-    </ul>
+    </small>
+  </li>
+</ul>
 
-    
+<br>
 
-    <div class="article-content">
-    <p>As of mid-2013, Pelican still advertised PDF generation of articles/pages
+  
+
+<div class="list-group-item-text article-body">
+  <p>As of mid-2013, Pelican still advertised PDF generation of articles/pages
 as one of its <a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features">features</a>. However, the <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3">change log</a> indicates that this
 is no longer a core feature and has since become a Pelican plugin as of
 version 3.3.0 (2013-09-24), see <a class="reference external" href="https://github.com/getpelican/pelican/issues/1009">issue</a> for further discussion. Therefore, it was
@@ -181,11 +184,10 @@ will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt
 </div>
 <!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf -->
 
-    </div> <!-- /article-content -->
+</div>
 
-  </div> <!-- /panel-body -->
-  <ul class="list-group">
-    <li class="list-group-item">
+  </li>
+  <li class="list-group-item">
 <div class="comments">
 	<h3>Comments</h3>
 	<div id="disqus_thread"></div>
@@ -209,10 +211,8 @@ will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
 </div>
-    </li>
-  </ul>
-  <div class="panel-footer">Panel footer</div>
-</div> <!-- /panel -->
+  </li>
+</ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
@@ -239,8 +239,7 @@ will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt
             </p>
           </div>
           <div class="row">
-            <h4 class="text-muted">Links</h4>
-              <div class="col-md-2">
+              <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
@@ -255,9 +254,10 @@ will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->
+          <br>
           <div class="row">
             <p class="pull-right">
-              <a href="#">Back to top</a>
+              <a href="#"><i class="fa fa-arrow-up"></i> Back to top</a>
             </p>
             <small>
               Copyright &copy; Louis Tiao 2015  

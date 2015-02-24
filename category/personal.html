@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -93,20 +93,63 @@
   category/personal.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
-<div class="panel panel-default">
   <ul class="list-group">
     <li class="list-group-item">
-      <h4>
-        <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html" rel="bookmark"
-           title="Permalink to Here is a personal post of something interesting">
-        Here is a personal post of something interesting
-        </a>
-      </h4>
-      
+<h3 class="list-group-item-heading">
+  <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html" rel="bookmark"
+     title="Permalink to Here is a personal post of something interesting">
+  Here is a personal post of something interesting
+  </a>
+</h3>
+
+<ul class="list-inline">
+  <li>
+    <small>
+      <i class="fa fa-user"></i>
+      <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
+    </small>
+  </li>
+  <li>
+    <abbr title="Published">
+      <small>
+        <i class="fa fa-calendar"></i>
+        Mon 26 January 2015
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <abbr title="Last modified">
+      <small>
+        <i class="fa fa-edit"></i>
+        Wed 28 January 2015
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <small>
+      <i class="fa fa-comments"></i>
+      <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html#disqus_thread"
+         data-disqus-identifier="article-here-is-a-personal-post-of-something-interesting-01-2015">
+        Leave a comment
+      </a>
+    </small>
+  </li>
+</ul>
+
+<br>
+
+  
+
+<div class="list-group-item-text article-body clearfix">
+  
+  <p class="pull-right">
+    <a class="btn btn-primary btn-xs" role="button" 
+       href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html">more...</a>
+  </p>
+</div> <!-- /article-body -->
+
     </li>
   </ul>
-</div> <!-- /panel -->
-
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
@@ -133,8 +176,7 @@
             </p>
           </div>
           <div class="row">
-            <h4 class="text-muted">Links</h4>
-              <div class="col-md-2">
+              <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
@@ -149,9 +191,10 @@
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->
+          <br>
           <div class="row">
             <p class="pull-right">
-              <a href="#">Back to top</a>
+              <a href="#"><i class="fa fa-arrow-up"></i> Back to top</a>
             </p>
             <small>
               Copyright &copy; Louis Tiao 2015  

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -93,58 +93,61 @@
   my-super-post.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h2>
-      <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
-         title="Permalink to Hosting Pelican site on Github: Best practices">
-      Hosting Pelican site on Github: Best practices
+<ul class="list-group">
+  <li class="list-group-item">
+<h3 class="list-group-item-heading">
+  <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
+     title="Permalink to Hosting Pelican site on Github: Best practices">
+  Hosting Pelican site on Github: Best practices
+  </a>
+</h3>
+
+<ul class="list-inline">
+  <li>
+    <small>
+      <i class="fa fa-user"></i>
+      <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
+    </small>
+  </li>
+  <li>
+    <small>
+      <i class="fa fa-user"></i>
+      <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
+    </small>
+  </li>
+  <li>
+    <abbr title="Published">
+      <small>
+        <i class="fa fa-calendar"></i>
+        Sun 03 October 2010
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <abbr title="Last modified">
+      <small>
+        <i class="fa fa-edit"></i>
+        Mon 04 October 2010
+      </small>
+    </abbr>
+  </li>
+  <li>
+    <small>
+      <i class="fa fa-comments"></i>
+      <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
+         data-disqus-identifier="article-my-super-post-10-2010">
+        Leave a comment
       </a>
-    </h2>
-    <ul class="list-inline">
-      <li>
-        <small>
-          <i class="fa fa-user"></i>
-          <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
-        </small>
-      </li>
-      <li>
-        <small>
-          <i class="fa fa-user"></i>
-          <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
-        </small>
-      </li>
-      <li>
-        <abbr title="Published">
-          <small>
-            <i class="fa fa-calendar"></i>
-            Sun 03 October 2010
-          </small>
-        </abbr>
-      </li>
-      <li>
-        <abbr title="Last modified">
-          <small>
-            <i class="fa fa-edit"></i>
-            Mon 04 October 2010
-          </small>
-        </abbr>
-      </li>
-      <li>
-        <small>
-          <i class="fa fa-comments"></i>
-          <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
-             data-disqus-identifier="article-my-super-post-10-2010">
-            Leave a comment
-          </a>
-        </small>
-      </li>
-    </ul>
+    </small>
+  </li>
+</ul>
 
-    
+<br>
 
-    <div class="article-content">
-    <div class="section" id="starting-out">
+  
+
+<div class="list-group-item-text article-body">
+  <div class="section" id="starting-out">
 <h2>Starting out</h2>
 <ol class="arabic">
 <li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
@@ -248,11 +251,10 @@ Following is a review of my favorite mechanical keyboard.
 </div>
 </div>
 
-    </div> <!-- /article-content -->
+</div>
 
-  </div> <!-- /panel-body -->
-  <ul class="list-group">
-    <li class="list-group-item">
+  </li>
+  <li class="list-group-item">
 <div class="comments">
 	<h3>Comments</h3>
 	<div id="disqus_thread"></div>
@@ -276,10 +278,8 @@ Following is a review of my favorite mechanical keyboard.
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
 </div>
-    </li>
-  </ul>
-  <div class="panel-footer">Panel footer</div>
-</div> <!-- /panel -->
+  </li>
+</ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
@@ -306,8 +306,7 @@ Following is a review of my favorite mechanical keyboard.
             </p>
           </div>
           <div class="row">
-            <h4 class="text-muted">Links</h4>
-              <div class="col-md-2">
+              <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
@@ -322,9 +321,10 @@ Following is a review of my favorite mechanical keyboard.
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->
+          <br>
           <div class="row">
             <p class="pull-right">
-              <a href="#">Back to top</a>
+              <a href="#"><i class="fa fa-arrow-up"></i> Back to top</a>
             </p>
             <small>
               Copyright &copy; Louis Tiao 2015  

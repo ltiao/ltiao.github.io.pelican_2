@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -93,18 +93,19 @@
   pages/coursework.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h2>
+<ul class="list-group">
+  <li class="list-group-item">
+    <h2 class="list-group-item-heading">
       <a href="http://ltiao.github.io/pages/coursework.html" rel="bookmark"
          title="Permalink to Coursework">
       Coursework
       </a>
     </h2>
 
-    <div class="well">
-      <nav class="toc">
-      <div class="toc" id="">
+    <div class="list-group-item-text">
+      <div class="well">
+        <nav class="toc">
+        <div class="toc" id="">
 
 <ul class="simple">
 <li><a class="reference internal" href="#semester-2-2014" id="id7">Semester 2 - 2014</a><ul>
@@ -162,12 +163,12 @@
 </li>
 </ul>
 </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
 
-    
+      
 
-    
+      
 <div class="section" id="semester-2-2014">
 <h2><a class="toc-backref" href="#id7">Semester 2 - 2014</a></h2>
 <div class="section" id="comp6741-parameterized-and-exact-computation">
@@ -482,9 +483,9 @@ with <strong>svn</strong>, and debugging using <strong>GDB</strong>)</p>
 </div>
 </div>
 
-  </div> <!-- /panel-body -->
-  <!-- <div class="panel-footer">Panel footer</div> -->
-</div> <!-- /panel -->
+    </div>
+  </li>
+</ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
@@ -511,8 +512,7 @@ with <strong>svn</strong>, and debugging using <strong>GDB</strong>)</p>
             </p>
           </div>
           <div class="row">
-            <h4 class="text-muted">Links</h4>
-              <div class="col-md-2">
+              <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
@@ -527,9 +527,10 @@ with <strong>svn</strong>, and debugging using <strong>GDB</strong>)</p>
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->
+          <br>
           <div class="row">
             <p class="pull-right">
-              <a href="#">Back to top</a>
+              <a href="#"><i class="fa fa-arrow-up"></i> Back to top</a>
             </p>
             <small>
               Copyright &copy; Louis Tiao 2015  
