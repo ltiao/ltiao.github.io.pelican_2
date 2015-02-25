@@ -5,8 +5,12 @@
    ========================================================================== */
 
 body { 
-  background-image: url("../img/body-bg.jpg");
+  background-image: url("../img/white_wall_hash_@2X.png");
   background-color: #f3f3f3;
+}
+
+div.content-body {
+  font-size: 14px;
 }
 
 .footer {

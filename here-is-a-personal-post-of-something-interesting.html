@@ -10,10 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="http://ltiao.github.io/theme/css/pygments/xcode.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
@@ -48,7 +50,7 @@
                 </a>
               </li>
             </ul>
-            <h2>Louis Tiao <small>Math &middot; Computer Science &middot; Programming</small></h2>
+            <h2>Louis Tiao <small></small></h2>
           </div> <!-- .page-header -->         
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -95,44 +97,36 @@
         <div class="col-sm-9 col-md-10">
 <ul class="list-group">
   <li class="list-group-item">
-<h3 class="list-group-item-heading">
+<h2 class="list-group-item-heading">
   <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html" rel="bookmark"
-     title="Permalink to Here is a personal post of something interesting">
-  Here is a personal post of something interesting
+     title="Permalink to Here is a personal post of something interesting">
+  Here is a personal post of something&nbsp;interesting
   </a>
-</h3>
+</h2>
 
 <ul class="list-inline">
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
   </li>
   <li>
     <abbr title="Published">
-      <small>
-        <i class="fa fa-calendar"></i>
-        Mon 26 January 2015
-      </small>
+      <i class="fa fa-calendar"></i>
+      Mon 26 January 2015
     </abbr>
   </li>
   <li>
     <abbr title="Last modified">
-      <small>
-        <i class="fa fa-edit"></i>
-        Wed 28 January 2015
-      </small>
+      <i class="fa fa-edit"></i>
+      Wed 28 January 2015
     </abbr>
   </li>
   <li>
-    <small>
-      <i class="fa fa-comments"></i>
-      <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html#disqus_thread"
-         data-disqus-identifier="article-here-is-a-personal-post-of-something-interesting-01-2015">
-        Leave a comment
-      </a>
-    </small>
+    <i class="fa fa-comments"></i>
+    <a href="http://ltiao.github.io/here-is-a-personal-post-of-something-interesting.html#disqus_thread"
+       data-disqus-identifier="article-here-is-a-personal-post-of-something-interesting-01-2015">
+      Leave a comment
+    </a>
   </li>
 </ul>
 
@@ -140,8 +134,58 @@
 
   
 
-<div class="list-group-item-text article-body">
-  
+<div class="list-group-item-text content-body">
+  <p>The area of a circle is <span class="math">\(A_\text{c} = (\pi/4) d^2\)</span>.</p>
+<p>Now consider the&nbsp;following:</p>
+<div class="math">
+\begin{equation*}
+\alpha _t(i) = P(O_1, O_2, \ldots  O_t, q_t = S_i \lambda )
+\end{equation*}
+</div>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">():</span>
+<span class="lineno">2 </span>  <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span>
+<span class="lineno">3 </span>  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="lineno">4 </span>    <span class="k">yield</span> <span class="n">a</span>
+<span class="lineno">5 </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 </div>
 
   </li>
@@ -200,15 +244,13 @@
               <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
+              </div> <!-- /col -->
+              <div class="col-md-2">
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
                 <br>
               </div> <!-- /col -->
               <div class="col-md-2">
                 <small><a class"text-underline" href="http://jinja.pocoo.org/">Jinja2</a></small>
-                <br>
-              </div> <!-- /col -->
-              <div class="col-md-2">
-                <small><a class"text-underline" href="#">You can modify those links in your config file</a></small>
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->

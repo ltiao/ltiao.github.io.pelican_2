@@ -10,10 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="http://ltiao.github.io/theme/css/pygments/xcode.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
@@ -48,7 +50,7 @@
                 </a>
               </li>
             </ul>
-            <h2>Louis Tiao <small>Math &middot; Computer Science &middot; Programming</small></h2>
+            <h2>Louis Tiao <small></small></h2>
           </div> <!-- .page-header -->         
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -95,50 +97,40 @@
         <div class="col-sm-9 col-md-10">
   <ul class="list-group">
     <li class="list-group-item">
-<h3 class="list-group-item-heading">
+<h2 class="list-group-item-heading">
   <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
-     title="Permalink to Hosting Pelican site on Github: Best practices">
-  Hosting Pelican site on Github: Best practices
+     title="Permalink to Hosting Pelican site on Github: Best practices">
+  Hosting Pelican site on Github: Best&nbsp;practices
   </a>
-</h3>
+</h2>
 
 <ul class="list-inline">
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
   </li>
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
   </li>
   <li>
     <abbr title="Published">
-      <small>
-        <i class="fa fa-calendar"></i>
-        Sun 03 October 2010
-      </small>
+      <i class="fa fa-calendar"></i>
+      Sun 03 October 2010
     </abbr>
   </li>
   <li>
     <abbr title="Last modified">
-      <small>
-        <i class="fa fa-edit"></i>
-        Mon 04 October 2010
-      </small>
+      <i class="fa fa-edit"></i>
+      Mon 04 October 2010
     </abbr>
   </li>
   <li>
-    <small>
-      <i class="fa fa-comments"></i>
-      <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
-         data-disqus-identifier="article-my-super-post-10-2010">
-        Leave a comment
-      </a>
-    </small>
+    <i class="fa fa-comments"></i>
+    <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
+       data-disqus-identifier="article-my-super-post-10-2010">
+      Leave a comment
+    </a>
   </li>
 </ul>
 
@@ -146,16 +138,16 @@
 
   
 
-<div class="list-group-item-text article-body clearfix">
+<div class="list-group-item-text content-body clearfix">
   <div class="section" id="starting-out">
-<h2>Starting out</h2>
+<h2>Starting&nbsp;out</h2>
 <ol class="arabic">
 <li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
 <ul class="simple">
 <li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
 </ul>
 </li>
-<li><p class="first">Clone the newly created repository:</p>
+<li><p class="first">Clone the newly created&nbsp;repository:</p>
 <pre class="literal-block">
 $ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
 </pre>
@@ -166,7 +158,7 @@ $ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
 $ mkvirtualenv &lt;venv_name&gt;
 </pre>
 </li>
-<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you&#8217;re not confident with <tt class="docutils literal">reStructuredText</tt>
 yet, then install Markdown ...</p></li></ol></div>
   <p class="pull-right">
     <a class="btn btn-primary btn-xs" role="button" 
@@ -205,15 +197,13 @@ yet, then install Markdown ...</p></li></ol></div>
               <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
+              </div> <!-- /col -->
+              <div class="col-md-2">
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
                 <br>
               </div> <!-- /col -->
               <div class="col-md-2">
                 <small><a class"text-underline" href="http://jinja.pocoo.org/">Jinja2</a></small>
-                <br>
-              </div> <!-- /col -->
-              <div class="col-md-2">
-                <small><a class"text-underline" href="#">You can modify those links in your config file</a></small>
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->

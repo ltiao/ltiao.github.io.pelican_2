@@ -10,10 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="http://ltiao.github.io/theme/css/pygments/xcode.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
@@ -48,7 +50,7 @@
                 </a>
               </li>
             </ul>
-            <h2>Louis Tiao <small>Math &middot; Computer Science &middot; Programming</small></h2>
+            <h2>Louis Tiao <small></small></h2>
           </div> <!-- .page-header -->         
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -95,36 +97,30 @@
         <div class="col-sm-9 col-md-10">
 <ul class="list-group">
   <li class="list-group-item">
-<h3 class="list-group-item-heading">
+<h2 class="list-group-item-heading">
   <a href="http://ltiao.github.io/drafts/customizing-pelican-themes.html" rel="bookmark"
-     title="Permalink to Customizing Pelican Themes">
-  Customizing Pelican Themes
+     title="Permalink to Customizing Pelican Themes">
+  Customizing Pelican&nbsp;Themes
   </a>
-</h3>
+</h2>
 
 <ul class="list-inline">
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
   </li>
   <li>
     <abbr title="Published">
-      <small>
-        <i class="fa fa-calendar"></i>
-        Tue 27 January 2015
-      </small>
+      <i class="fa fa-calendar"></i>
+      Tue 27 January 2015
     </abbr>
   </li>
   <li>
-    <small>
-      <i class="fa fa-comments"></i>
-      <a href="http://ltiao.github.io/drafts/customizing-pelican-themes.html#disqus_thread"
-         data-disqus-identifier="article-customizing-pelican-themes-01-2015">
-        Leave a comment
-      </a>
-    </small>
+    <i class="fa fa-comments"></i>
+    <a href="http://ltiao.github.io/drafts/customizing-pelican-themes.html#disqus_thread"
+       data-disqus-identifier="article-customizing-pelican-themes-01-2015">
+      Leave a comment
+    </a>
   </li>
 </ul>
 
@@ -132,14 +128,14 @@
 
   
 
-<div class="list-group-item-text article-body">
+<div class="list-group-item-text content-body">
   <p>I want to design and create most of the templates myself and use
 Bootstrap 3. There seems to be an inexhaustible number of potentially
 useful features that can be supported in a theme, and rather than
 spending all my time coming up features I should support, I will
 simply fork the project <a class="reference external" href="https://github.com/DandyDev/pelican-bootstrap3">pelican-bootstrap3 from DandyDev</a>
 and basically reinvent it. Essentially, all that will remain the
-same are the features it will support.</p>
+same are the features it will&nbsp;support.</p>
 <ol class="arabic">
 <li><p class="first">Create a <tt class="docutils literal">themes</tt> directory:</p>
 <pre class="literal-block">
@@ -159,26 +155,26 @@ $ git clone https://github.com/ltiao/pelican-bootstrap3
 but I now realized there is no compelling reason for doing this.
 The theme can actually exist independently of my Pelican project
 files and not be married to this particular project. In fact, I
-didn't even need to create the <tt class="docutils literal">themes</tt> subdirectory and clone
+didn&#8217;t even need to create the <tt class="docutils literal">themes</tt> subdirectory and clone
 the repository into it - there are so many ways of incorporating
-themes into Pelican, I may as well document it here for posterity.</p>
+themes into Pelican, I may as well document it here for&nbsp;posterity.</p>
 <div class="section" id="intermezzo">
 <h2>Intermezzo</h2>
 <ol class="arabic">
 <li><p class="first">Provide the theme path to <tt class="docutils literal">pelican</tt> in the <tt class="docutils literal"><span class="pre">-t</span></tt> or
 <tt class="docutils literal"><span class="pre">--theme-path</span></tt> argument. Path can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>.</p>
 </li>
-<li><p class="first">Provide the theme path in the <tt class="docutils literal">THEME</tt> variable in the settings
+<li><p class="first">Provide the theme path in the <tt class="docutils literal"><span class="caps">THEME</span></tt> variable in the settings
 file. Path can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>.</p>
 </li>
 <li><p class="first">Install the theme using <tt class="docutils literal"><span class="pre">pelican-themes</span></tt> by supplying the
 theme path in either the <tt class="docutils literal"><span class="pre">-i</span></tt> or <tt class="docutils literal"><span class="pre">-s</span></tt> argument. Again, path
 can be relative to <tt class="docutils literal"><span class="pre">&lt;pelican-site-root&gt;</span></tt>. The former copies
-the theme while the later creates a symbolic link.</p>
+the theme while the later creates a symbolic&nbsp;link.</p>
 <p>The theme should now appear the themes list <tt class="docutils literal"><span class="pre">pelican-themes</span> <span class="pre">-l</span></tt>
 and you should now be able to use this theme with approach
-1 or 2 by simply supplying the theme name rather than the path.</p>
-<p>Use <tt class="docutils literal"><span class="pre">pelican-themes</span> <span class="pre">-r</span></tt> to remove the theme.</p>
+1 or 2 by simply supplying the theme name rather than the&nbsp;path.</p>
+<p>Use <tt class="docutils literal"><span class="pre">pelican-themes</span> <span class="pre">-r</span></tt> to remove the&nbsp;theme.</p>
 </li>
 </ol>
 <p>If the theme is under development, then using symlinks with the 3rd
@@ -188,11 +184,11 @@ Otherwise, if the theme lives outside of the <tt class="docutils literal"><span 
 hierarchy, this is highly recommended. I anticipate that this theme
 will be tightly coupled with this particular Pelican project.
 Furthermore, I doubt I will be reusing this theme elsewhere, hence
-the reason I have organized it this way.</p>
+the reason I have organized it this&nbsp;way.</p>
 </div>
 <div class="section" id="continuing-on">
-<h2>Continuing on...</h2>
-<p>I almost start all of my projects with HTML5 Boilerplate, pre-configured
+<h2>Continuing&nbsp;on&#8230;</h2>
+<p>I almost start all of my projects with <span class="caps">HTML5</span> Boilerplate, pre-configured
 with Bootstrap <a class="footnote-reference" href="#id2" id="id1">[1]</a>. Download, unzip it and move <tt class="docutils literal">index.html</tt> to <tt class="docutils literal">templates/</tt>
 and the rest of the files to <tt class="docutils literal">static/</tt>:</p>
 <pre class="literal-block">
@@ -200,7 +196,7 @@ $ unzip initializr-verekia-4.0.zip
 $ mv initializr/index.html &lt;pelican-site-root&gt;/themes/&lt;theme_name&gt;/templates/boilerplate.html
 $ mv initializr/* &lt;pelican-site-root&gt;/themes/&lt;theme_name&gt;/static
 </pre>
-<p>Replace everything in the <tt class="docutils literal">body</tt> tag between:</p>
+<p>Replace everything in the <tt class="docutils literal">body</tt> tag&nbsp;between:</p>
 <pre class="literal-block">
 &lt;!--[if lt IE 7]&gt;
     &lt;p class=&quot;browsehappy&quot;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&quot;http://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
@@ -215,7 +211,7 @@ $ mv initializr/* &lt;pelican-site-root&gt;/themes/&lt;theme_name&gt;/static
 <pre class="literal-block">
 {% block body %}{% endblock %}
 </pre>
-<p>Now, create <tt class="docutils literal">base.html</tt>, inherit from <tt class="docutils literal">boilerplate.html</tt> and begin designing:</p>
+<p>Now, create <tt class="docutils literal">base.html</tt>, inherit from <tt class="docutils literal">boilerplate.html</tt> and begin&nbsp;designing:</p>
 <pre class="literal-block">
 $ cat &gt;&gt; base.html
 {% extends &quot;boilerplate.html&quot; %}
@@ -266,15 +262,13 @@ One fine body...
               <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
+              </div> <!-- /col -->
+              <div class="col-md-2">
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
                 <br>
               </div> <!-- /col -->
               <div class="col-md-2">
                 <small><a class"text-underline" href="http://jinja.pocoo.org/">Jinja2</a></small>
-                <br>
-              </div> <!-- /col -->
-              <div class="col-md-2">
-                <small><a class"text-underline" href="#">You can modify those links in your config file</a></small>
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->

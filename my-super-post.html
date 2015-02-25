@@ -10,10 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="http://ltiao.github.io/theme/css/pygments/xcode.css">
 
     <link rel="stylesheet" href="http://ltiao.github.io/theme/css/main.css">
     
@@ -48,7 +50,7 @@
                 </a>
               </li>
             </ul>
-            <h2>Louis Tiao <small>Math &middot; Computer Science &middot; Programming</small></h2>
+            <h2>Louis Tiao <small></small></h2>
           </div> <!-- .page-header -->         
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -95,50 +97,40 @@
         <div class="col-sm-9 col-md-10">
 <ul class="list-group">
   <li class="list-group-item">
-<h3 class="list-group-item-heading">
+<h2 class="list-group-item-heading">
   <a href="http://ltiao.github.io/my-super-post.html" rel="bookmark"
-     title="Permalink to Hosting Pelican site on Github: Best practices">
-  Hosting Pelican site on Github: Best practices
+     title="Permalink to Hosting Pelican site on Github: Best practices">
+  Hosting Pelican site on Github: Best&nbsp;practices
   </a>
-</h3>
+</h2>
 
 <ul class="list-inline">
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/alexis-metaireau.html">Alexis Metaireau</a>
   </li>
   <li>
-    <small>
-      <i class="fa fa-user"></i>
-      <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
-    </small>
+    <i class="fa fa-user"></i>
+    <a href="http://ltiao.github.io/author/conan-doyle.html">Conan Doyle</a>
   </li>
   <li>
     <abbr title="Published">
-      <small>
-        <i class="fa fa-calendar"></i>
-        Sun 03 October 2010
-      </small>
+      <i class="fa fa-calendar"></i>
+      Sun 03 October 2010
     </abbr>
   </li>
   <li>
     <abbr title="Last modified">
-      <small>
-        <i class="fa fa-edit"></i>
-        Mon 04 October 2010
-      </small>
+      <i class="fa fa-edit"></i>
+      Mon 04 October 2010
     </abbr>
   </li>
   <li>
-    <small>
-      <i class="fa fa-comments"></i>
-      <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
-         data-disqus-identifier="article-my-super-post-10-2010">
-        Leave a comment
-      </a>
-    </small>
+    <i class="fa fa-comments"></i>
+    <a href="http://ltiao.github.io/my-super-post.html#disqus_thread"
+       data-disqus-identifier="article-my-super-post-10-2010">
+      Leave a comment
+    </a>
   </li>
 </ul>
 
@@ -146,16 +138,16 @@
 
   
 
-<div class="list-group-item-text article-body">
+<div class="list-group-item-text content-body">
   <div class="section" id="starting-out">
-<h2>Starting out</h2>
+<h2>Starting&nbsp;out</h2>
 <ol class="arabic">
 <li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
 <ul class="simple">
 <li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
 </ul>
 </li>
-<li><p class="first">Clone the newly created repository:</p>
+<li><p class="first">Clone the newly created&nbsp;repository:</p>
 <pre class="literal-block">
 $ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
 </pre>
@@ -166,8 +158,8 @@ $ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
 $ mkvirtualenv &lt;venv_name&gt;
 </pre>
 </li>
-<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you're not confident with <tt class="docutils literal">reStructuredText</tt>
-yet, then install Markdown as well):</p>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you&#8217;re not confident with <tt class="docutils literal">reStructuredText</tt>
+yet, then install Markdown as&nbsp;well):</p>
 <pre class="literal-block">
 $ pip install pelican markdown
 </pre>
@@ -179,9 +171,9 @@ $ cd &lt;site_root&gt;
 $ pelican-quickstart
 </pre>
 <p>and answer the prompts according to your needs. Presumably, you want
-to upload your website using GitHub Pages, else you wouldn't be here.
+to upload your website using GitHub Pages, else you wouldn&#8217;t be here.
 Make sure you answer <tt class="docutils literal">y</tt> to generating a Fabfile/Makefile and to
-using Github pages.</p>
+using Github&nbsp;pages.</p>
 <blockquote>
 <!-- This is how I answered the prompt. Commented out to hide -->
 <!-- sensitive information. -->
@@ -198,7 +190,7 @@ using Github pages.</p>
 <!-- > Do you want to enable article pagination? (Y/n) Y -->
 <!-- > How many articles per page do you want? [10] 5 -->
 <!-- > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y -->
-<!-- > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) Y -->
+<!-- > Do you want an auto-reload <span class="amp">&amp;</span> simpleHTTP script to assist with theme and site development? (Y/n) Y -->
 <!-- > Do you want to upload your website using FTP? (y/N) N -->
 <!-- > Do you want to upload your website using SSH? (y/N) y -->
 <!-- > What is the hostname of your SSH server? [localhost] cse.unsw.edu.au -->
@@ -216,19 +208,18 @@ using Github pages.</p>
 </ol>
 </div>
 <div class="section" id="source-control">
-<h2>Source control</h2>
-<p>If you're already familiar with Github Pages, you will will already know
+<h2>Source&nbsp;control</h2>
+<p>If you&#8217;re already familiar with Github Pages, you will will already know
 that content from the <tt class="docutils literal">master</tt> branch will be used to build and publish your
-GitHub Pages site. Read this <a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">article</a> if you have no idea what I'm talking
-about.</p>
+GitHub Pages site. Read this <a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">article</a> if you have no idea what I&#8217;m talking&nbsp;about.</p>
 <div class="section" id="approach-1-the-octopress-approach">
-<h3>Approach #1: The Octopress Approach</h3>
+<h3>Approach #1: The Octopress&nbsp;Approach</h3>
 <ol class="arabic">
 <li><p class="first"><tt class="docutils literal">git checkout <span class="pre">-b</span> source</tt></p>
 </li>
 <li><p class="first"><tt class="docutils literal">git add Makefile develop_server.sh fabfile.py pelicanconf.py publishconf.py</tt></p>
 </li>
-<li><p class="first">commit these files</p>
+<li><p class="first">commit these&nbsp;files</p>
 </li>
 <li><p class="first"><tt class="docutils literal">git push origin source</tt></p>
 </li>
@@ -241,12 +232,12 @@ Category: Review
 Following is a review of my favorite mechanical keyboard.
 </pre>
 </li>
-<li><p class="first">make github</p>
+<li><p class="first">make&nbsp;github</p>
 </li>
 </ol>
 </div>
 <div class="section" id="approach-2-git-submodule">
-<h3>Approach #2: Git Submodule</h3>
+<h3>Approach #2: Git&nbsp;Submodule</h3>
 <p>S</p>
 </div>
 </div>
@@ -309,15 +300,13 @@ Following is a review of my favorite mechanical keyboard.
               <div class="col-md-2 col-md-offset-3">
                 <small><a class"text-underline" href="http://getpelican.com/">Pelican</a></small>
                 <br>
+              </div> <!-- /col -->
+              <div class="col-md-2">
                 <small><a class"text-underline" href="http://python.org/">Python.org</a></small>
                 <br>
               </div> <!-- /col -->
               <div class="col-md-2">
                 <small><a class"text-underline" href="http://jinja.pocoo.org/">Jinja2</a></small>
-                <br>
-              </div> <!-- /col -->
-              <div class="col-md-2">
-                <small><a class"text-underline" href="#">You can modify those links in your config file</a></small>
                 <br>
               </div> <!-- /col -->
           </div> <!-- /row -->
