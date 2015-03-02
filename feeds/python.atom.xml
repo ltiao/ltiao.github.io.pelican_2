@@ -1,74 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/python.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-02-22T22:00:00+01:00</updated><entry><title>Pelican Tiao Bootstrap Theme: Mini-Documentation</title><link href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html" rel="alternate"></link><updated>2015-02-22T22:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-22:pelican-tiao-bootstrap-theme-mini-documentation.html</id><summary type="html">&lt;div class="section" id="inspiration"&gt;
-&lt;h2&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;I liked how &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap"&gt;simple-bootstrap&lt;/a&gt; took Bootstrap&amp;#8217;s &lt;a class="reference external" href="http://getbootstrap.com/examples/jumbotron-narrow/"&gt;Jumbotron Narrow&lt;/a&gt;,
-to create a clean, minimalistic design. However, it might be overly
-simplistic and lacked the features of, say, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt; sports a lot of great features, but I dislike
-how little thought seems to have gone into the actual design. It
-looks like any another generic Bootstrap&amp;nbsp;site.&lt;/p&gt;
-&lt;p&gt;The typography of &lt;a class="reference external" href="https://github.com/cpaulik/martin-pelican/"&gt;martin-pelican&lt;/a&gt; is very cool, and I especially
-like the white panel on the light grey&amp;nbsp;background.&lt;/p&gt;
-&lt;p&gt;The same can be said of &lt;a class="reference external" href="https://github.com/blueicefield/pelican-blueidea"&gt;blueidea&lt;/a&gt;  which, as far as I can tell,
-is just a blue version of the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme that is shipped
-with&amp;nbsp;Pelican.&lt;/p&gt;
-&lt;p&gt;The &lt;a class="reference external" href="https://github.com/tbunnyman/pelican-chunk"&gt;chunk&lt;/a&gt; theme is neat in how it utilizes 2 columns to separate
-article content and metadata. The &lt;a class="reference external" href="https://github.com/porterjamesj/crowsfoot"&gt;crowsfoot&lt;/a&gt; header looks cool,
-but not much else can be said for its content&amp;nbsp;presentation.&lt;/p&gt;
-&lt;p&gt;I quite like the footer in &lt;a class="reference external" href="https://github.com/PierrePaul/html5-dopetrope"&gt;html5-dopetrope&lt;/a&gt;, but don&amp;#8217;t like how
-articles are listed in a 1x3 format, side-by-side, horizonally.
-This would only be useful for photography and other visual posts,
-and not much&amp;nbsp;else.&lt;/p&gt;
-&lt;p&gt;The themes &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/aboutwilson"&gt;aboutwilson&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/talha131/pelican-elegant"&gt;elegant&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/foundation-default-colours"&gt;foundation-default-colours&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/gum"&gt;gum&lt;/a&gt;,
-&lt;a class="reference external" href="https://github.com/siovene/lannisport"&gt;Lannisport&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/gunchu/nikhil-theme"&gt;nikhil-theme&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/fle/pelican-simplegrey"&gt;simplegrey&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/fle/pelican-sober"&gt;sober&lt;/a&gt; are clean and neat
-but also seem slightly plain and&amp;nbsp;uninspired.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="pelican"></category><category term="themes"></category><category term="bootstrap"></category><category term="documentation"></category></entry><entry><title>Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/python.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-02-05T20:00:00+01:00</updated><entry><title>Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ pip list --outdated | cut -d' ' -f1 | xargs pip install --upgrade
 &lt;/pre&gt;
 &lt;p&gt;for versions of &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; that has the &lt;tt class="docutils literal"&gt;list&lt;/tt&gt; command, which I believe
 is&amp;nbsp;1.3+.&lt;/p&gt;
-</summary><category term="pip"></category><category term="python"></category></entry><entry><title>Generate PDFs from Pelican Articles</title><link href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="alternate"></link><updated>2015-01-28T00:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-26:generate-pdfs-from-pelican-articles.html</id><summary type="html">&lt;p&gt;As of mid-2013, Pelican still advertised &lt;span class="caps"&gt;PDF&lt;/span&gt; generation of articles/pages
-as one of its &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features"&gt;features&lt;/a&gt;. However, the &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3"&gt;change log&lt;/a&gt; indicates that this
-is no longer a core feature and has since become a Pelican plugin as of
-version 3.3.0 (2013-09-24), see &lt;a class="reference external" href="https://github.com/getpelican/pelican/issues/1009"&gt;issue&lt;/a&gt; for further discussion. Therefore, it was
-rather confounding to find the setting &lt;tt class="docutils literal"&gt;PDF_GENERATOR&lt;/tt&gt; to be listed in the
-&lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings"&gt;examples settings&lt;/a&gt; of version 3.5.0, and of course, to no one&amp;#8217;s surprise,
-adding the setting &lt;tt class="docutils literal"&gt;PDF_GENERATOR=True&lt;/tt&gt; isn&amp;#8217;t going to do&amp;nbsp;anything.&lt;/p&gt;
-&lt;p&gt;If you have used &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html"&gt;Pelican plugins&lt;/a&gt; before, then the solution should be obvious.
-Simply install the &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt; plugin from &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html"&gt;Pelican plugins&lt;/a&gt;. I personally
-prefer to keep all plugins (and themes) in the &lt;tt class="docutils literal"&gt;&amp;lt;pelican_site_root&amp;gt;&lt;/tt&gt; directory,
-on the same level as the &lt;tt class="docutils literal"&gt;pelicanconf.py&lt;/tt&gt; settings&amp;nbsp;file:&lt;/p&gt;
+</summary><category term="pip"></category><category term="python"></category><category term="recipe"></category></entry><entry><title>Hosting Pelican site on Github the Right Way(s)</title><link href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html" rel="alternate"></link><updated>2010-10-04T18:40:00+02:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2010-10-03:hosting-pelican-site-on-github-the-right-ways.html</id><summary type="html">&lt;div class="section" id="starting-out"&gt;
+&lt;h2&gt;Starting&amp;nbsp;out&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create a new git repository at Github: &lt;a class="reference external" href="https://github.com/new"&gt;https://github.com/new&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add Python to &lt;tt class="docutils literal"&gt;.gitignore&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Clone the newly created&amp;nbsp;repository:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-$ cd &amp;lt;pelican_site_root&amp;gt;
-$ mkdir plugins
-$ git clone https://github.com/getpelican/pelican-plugins.git plugins
+$ git clone &amp;lt;repo_https_clone_url&amp;gt; &amp;lt;site_root&amp;gt;
 &lt;/pre&gt;
-&lt;p&gt;Optionally, you can also add the repository as a&amp;nbsp;submodule:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt; (command only works if you have
+&lt;tt class="docutils literal"&gt;virtualenvwrapper&lt;/tt&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
+$ mkvirtualenv &amp;lt;venv_name&amp;gt;
 &lt;/pre&gt;
-&lt;p&gt;or clone it anywhere else you like for that&amp;nbsp;matter.&lt;/p&gt;
-&lt;p&gt;Lastly, you simply need to add &lt;tt class="docutils literal"&gt;plugins&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;PLUGIN_PATHS&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt;
-to &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;PLUGINS&lt;/span&gt;&lt;/tt&gt;. The former will temporarily add &lt;tt class="docutils literal"&gt;PLUGIN_PATHS&lt;/tt&gt; to your
-system path so that the latter is&amp;nbsp;importable:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Install &lt;tt class="docutils literal"&gt;pelican&lt;/tt&gt; (if you&amp;#8217;re not confident with &lt;tt class="docutils literal"&gt;reStructuredText&lt;/tt&gt;
+yet, then install Markdown as&amp;nbsp;well):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pdf']
+$ pip install pelican markdown
 &lt;/pre&gt;
-&lt;p&gt;When you run &lt;tt class="docutils literal"&gt;pelican&lt;/tt&gt; (or &lt;tt class="docutils literal"&gt;make html&lt;/tt&gt;), the generated PDFs of your articles
-will appear in the &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt; directory of the output directory, named according
-to the article slug with the &lt;tt class="docutils literal"&gt;.pdf&lt;/tt&gt; extension.&lt;/p&gt;
-&lt;p&gt;In my opinion, the generated PDFs aren&amp;#8217;t exactly terrific, and the plugin could
-do with a little bit more work. Download this article as a &lt;span class="caps"&gt;PDF&lt;/span&gt; to see what I
-mean (how&amp;nbsp;meta!)&lt;/p&gt;
-&lt;!-- Download the `PDF of this article`_ to see what I mean (how meta!) --&gt;
-&lt;div class="note"&gt;
-&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
-&lt;p class="last"&gt;If you happen to be using the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme, a link &lt;em&gt;get the pdf&lt;/em&gt;
-will appear by simply adding &lt;tt class="docutils literal"&gt;PDF_PROCESSOR=True&lt;/tt&gt; to your settings
-(as of &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html"&gt;commit a7ca52&lt;/a&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Navigate to &lt;tt class="docutils literal"&gt;&amp;lt;site_root&amp;gt;&lt;/tt&gt; and execute the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pelican-quickstart&lt;/span&gt;&lt;/tt&gt;
+script:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd &amp;lt;site_root&amp;gt;
+$ pelican-quickstart
+&lt;/pre&gt;
+&lt;p&gt;and answer the prompts according to your needs. Presumably, you want
+to upload your website using GitHub Pages, else you wouldn&amp;#8217;t be here.
+Make sure you answer &lt;tt class="docutils literal"&gt;y&lt;/tt&gt; to generating a Fabfile/Makefile and to
+using Github&amp;nbsp;pages.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;!-- This is how I answered the prompt. Commented out to hide --&gt;
+&lt;!-- sensitive information. --&gt;
+&lt;!-- Welcome to pelican-quickstart v3.5.0. --&gt;
+&lt;!-- This script will help you create a new Pelican-based website. --&gt;
+&lt;!-- Please answer the following questions so this script can generate the files --&gt;
+&lt;!-- needed by Pelican. --&gt;
+&lt;!-- &gt; Where do you want to create your new web site? [.] --&gt;
+&lt;!-- &gt; What will be the title of this web site? Louis Tiao --&gt;
+&lt;!-- &gt; Who will be the author of this web site? Louis Tiao --&gt;
+&lt;!-- &gt; What will be the default language of this web site? [en] --&gt;
+&lt;!-- &gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) Y --&gt;
+&lt;!-- &gt; What is your URL prefix? (see above example; no trailing slash) http://ltiao.github.io --&gt;
+&lt;!-- &gt; Do you want to enable article pagination? (Y/n) Y --&gt;
+&lt;!-- &gt; How many articles per page do you want? [10] 5 --&gt;
+&lt;!-- &gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y --&gt;
+&lt;!-- &gt; Do you want an auto-reload &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? (Y/n) Y --&gt;
+&lt;!-- &gt; Do you want to upload your website using FTP? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using SSH? (y/N) y --&gt;
+&lt;!-- &gt; What is the hostname of your SSH server? [localhost] cse.unsw.edu.au --&gt;
+&lt;!-- &gt; What is the port of your SSH server? [22] --&gt;
+&lt;!-- &gt; What is your username on that server? [root] ctia193 --&gt;
+&lt;!-- &gt; Where do you want to put your web site on that server? [/var/www] ~/public_html --&gt;
+&lt;!-- &gt; Do you want to upload your website using Dropbox? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using S3? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) N --&gt;
+&lt;!-- &gt; Do you want to upload your website using GitHub Pages? (y/N) y --&gt;
+&lt;!-- &gt; Is this your personal page (username.github.io)? (y/N) y --&gt;
+&lt;!-- Done. Your new project is available at /Users/tiao/Dropbox/Projects/website --&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
-&lt;!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf --&gt;
-</summary><category term="pelican"></category><category term="pdf"></category></entry></feed>
+&lt;div class="section" id="source-control"&gt;
+&lt;h2&gt;Source&amp;nbsp;control&lt;/h2&gt;
+&lt;p&gt;If you&amp;#8217;re already familiar with Github Pages, you will will already know
+that content from the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch will be used to build and publish your
+GitHub Pages site. Read this &lt;a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages"&gt;article&lt;/a&gt; if you have no idea what I&amp;#8217;m talking&amp;nbsp;about.&lt;/p&gt;
+&lt;div class="section" id="approach-1-the-octopress-approach"&gt;
+&lt;h3&gt;Approach #1: The Octopress&amp;nbsp;Approach&lt;/h3&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git checkout &lt;span class="pre"&gt;-b&lt;/span&gt; source&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git add Makefile develop_server.sh fabfile.py pelicanconf.py publishconf.py&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;commit these&amp;nbsp;files&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;git push origin source&lt;/tt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;create an article &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;&amp;lt;root&amp;gt;/keyboard-review.md&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+
+Following is a review of my favorite mechanical keyboard.
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;make&amp;nbsp;github&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="approach-2-git-submodule"&gt;
+&lt;h3&gt;Approach #2: Git&amp;nbsp;Submodule&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Coming&amp;nbsp;soon&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="pelican"></category><category term="github"></category><category term=""></category></entry></feed>

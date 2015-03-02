@@ -86,9 +86,6 @@
   <li class="active">
     <a href="http://ltiao.github.io/category/python.html">Python</a>
   </li>
-  <li >
-    <a href="http://ltiao.github.io/category/research.html">Research</a>
-  </li>
 </ul> <!-- /nav -->
 <hr>
 <div class="well">
@@ -96,53 +93,6 @@
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
   <ul class="list-group">
-    <li class="list-group-item">
-<h2 class="list-group-item-heading">
-  <a href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html" rel="bookmark"
-     title="Permalink to Pelican Tiao Bootstrap Theme: Mini-Documentation">
-  Pelican Tiao Bootstrap Theme:&nbsp;Mini-Documentation
-  </a>
-</h2>
-
-<ul class="list-inline">
-  <li>
-    <i class="fa fa-user"></i>
-    <a href="http://ltiao.github.io/author/louis-tiao.html">Louis Tiao</a>
-  </li>
-  <li>
-    <abbr title="Published">
-      <i class="fa fa-calendar"></i>
-      Sun 22 February 2015
-    </abbr>
-  </li>
-  <li>
-    <i class="fa fa-comments"></i>
-    <a href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html#disqus_thread"
-       data-disqus-identifier="article-pelican-tiao-bootstrap-theme-mini-documentation-02-2015">
-      Leave a comment
-    </a>
-  </li>
-</ul>
-
-<br>
-
-  
-
-<div class="list-group-item-text content-body clearfix">
-  <div class="section" id="inspiration">
-<h2>Inspiration</h2>
-<p>I liked how <a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap">simple-bootstrap</a> took Bootstrap&#8217;s <a class="reference external" href="http://getbootstrap.com/examples/jumbotron-narrow/">Jumbotron Narrow</a>,
-to create a clean, minimalistic design. However, it might be overly
-simplistic and lacked the features of, say, <a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a>.</p>
-<p><a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a> sports a lot of great features, but I dislike
-how little thought seems to have gone into the actual design ...</p></div>
-  <p class="pull-right">
-    <a class="btn btn-primary btn-xs" role="button" 
-       href="http://ltiao.github.io/pelican-tiao-bootstrap-theme-mini-documentation.html">more...</a>
-  </p>
-</div> <!-- /article-body -->
-
-    </li>
     <li class="list-group-item">
 <h2 class="list-group-item-heading">
   <a href="http://ltiao.github.io/upgrading-all-outdated-pip-packages.html" rel="bookmark"
@@ -192,9 +142,9 @@ is&nbsp;1.3+.</p>
     </li>
     <li class="list-group-item">
 <h2 class="list-group-item-heading">
-  <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="bookmark"
-     title="Permalink to Generate PDFs from Pelican Articles">
-  Generate PDFs from Pelican&nbsp;Articles
+  <a href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html" rel="bookmark"
+     title="Permalink to Hosting Pelican site on Github the Right Way(s)">
+  Hosting Pelican site on Github the Right&nbsp;Way(s)
   </a>
 </h2>
 
@@ -206,19 +156,19 @@ is&nbsp;1.3+.</p>
   <li>
     <abbr title="Published">
       <i class="fa fa-calendar"></i>
-      Mon 26 January 2015
+      Sun 03 October 2010
     </abbr>
   </li>
   <li>
     <abbr title="Last modified">
       <i class="fa fa-edit"></i>
-      Wed 28 January 2015
+      Mon 04 October 2010
     </abbr>
   </li>
   <li>
     <i class="fa fa-comments"></i>
-    <a href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html#disqus_thread"
-       data-disqus-identifier="article-generate-pdfs-from-pelican-articles-01-2015">
+    <a href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html#disqus_thread"
+       data-disqus-identifier="article-hosting-pelican-site-on-github-the-right-ways-10-2010">
       Leave a comment
     </a>
   </li>
@@ -229,11 +179,30 @@ is&nbsp;1.3+.</p>
   
 
 <div class="list-group-item-text content-body clearfix">
-  <p class="first last">How to generate PDFs from Pelican articles and&nbsp;pages</p>
-
+  <div class="section" id="starting-out">
+<h2>Starting&nbsp;out</h2>
+<ol class="arabic">
+<li><p class="first">Create a new git repository at Github: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p>
+<ul class="simple">
+<li>Add Python to <tt class="docutils literal">.gitignore</tt></li>
+</ul>
+</li>
+<li><p class="first">Clone the newly created&nbsp;repository:</p>
+<pre class="literal-block">
+$ git clone &lt;repo_https_clone_url&gt; &lt;site_root&gt;
+</pre>
+</li>
+<li><p class="first">Create <tt class="docutils literal">virtualenv</tt> (command only works if you have
+<tt class="docutils literal">virtualenvwrapper</tt>):</p>
+<pre class="literal-block">
+$ mkvirtualenv &lt;venv_name&gt;
+</pre>
+</li>
+<li><p class="first">Install <tt class="docutils literal">pelican</tt> (if you&#8217;re not confident with <tt class="docutils literal">reStructuredText</tt>
+yet, then install Markdown ...</p></li></ol></div>
   <p class="pull-right">
     <a class="btn btn-primary btn-xs" role="button" 
-       href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html">more...</a>
+       href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html">more...</a>
   </p>
 </div> <!-- /article-body -->
 
