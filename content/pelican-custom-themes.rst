@@ -4,7 +4,7 @@ Customizing Pelican Themes
 
 :date: 2015-01-27 20:00
 :tags: pelican, themes
-:category: python
+:category: Python
 :authors: Louis Tiao
 :summary: Setting up the Pelican environment for customized themes
 :status: draft

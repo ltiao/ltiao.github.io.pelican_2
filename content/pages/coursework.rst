@@ -164,7 +164,32 @@ COMP3891: Extended Operating Systems
 
   * **Assignment 3**
 
-    
+    Implementing the virtual memory subsystem of **OS/161** to
+    take full advantage of its emulated hardware:
+
+    + manipulation of the **MIPS** software-managed Translation Lookaside 
+      Buffer (TLB)
+    + implement data structure and interface for the frame table
+      (also known as coremap) to manage the physical memory, 
+      to support kernel-level memory allocation
+    + implement a data structure and interface for a two-level
+      hierarchical page table for virtual address translation
+    + implement the TLB refill signal handler, which will allocate the
+      hierarchical page table and physical pages on-demand as required,
+      or otherwise lookup the page table and refill the TLB. 
+    + implement OS/161's interface for virtual address space management
+      abstraction to interact with the virtual memory implementation.
+      E.g. methods for defining regions (text, data, stack) in the 
+      virtual address space, methods for copying the virtual address 
+      space (to support forking processes), etc.
+
+    Advanced assignment component for extended OS students further
+    consisted of implementing
+
+    + shared pages and copy-on-write (for optimizing space utilization
+      when forking processes.)
+    + implement the ``sbrk`` system call to enable the user-level ``malloc``
+      function.
 
 COMP4141: Theory of Computation
 *******************************

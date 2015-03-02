@@ -3,8 +3,8 @@ Upgrading all outdated pip packages
 ===================================
 
 :date: 2015-02-05 20:00
-:tags: pip, python
-:category: python
+:tags: pip, python, recipe
+:category: Python
 :authors: Louis Tiao
 
 Simply execute::

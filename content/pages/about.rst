@@ -2,13 +2,6 @@
 About
 =====
 
-.. raw:: html 
-
-   <blockquote class="blockquote-reverse">
-     <p>I may not be there yet, but I'm closer than I was yesterday.</p>
-     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-   </blockquote>
-
 Hi, I'm Louis.
 
 The best way to reach me is at `l..@me.com`_.

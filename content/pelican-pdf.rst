@@ -4,10 +4,11 @@ Generate PDFs from Pelican Articles
 
 :date: 2015-01-26 20:00
 :tags: pelican, pdf
-:category: python
+:category: Python
 :authors: Louis Tiao
 :summary: How to generate PDFs from Pelican articles and pages
 :modified: 2015-01-28 00:00
+:status: draft
 
 As of mid-2013, Pelican still advertised PDF generation of articles/pages 
 as one of its `features`_. However, the `change log`_ indicates that this 

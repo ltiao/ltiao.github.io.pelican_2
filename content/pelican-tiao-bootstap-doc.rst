@@ -4,7 +4,7 @@ Pelican Tiao Bootstrap Theme: Mini-Documentation
 
 :date: 2015-02-22 22:00
 :tags: pelican, themes, bootstrap, documentation
-:category: python
+:category: Python
 :authors: Louis Tiao
 :status: draft
 

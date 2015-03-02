@@ -6,7 +6,7 @@ AUTHOR = u'Louis Tiao'
 SITENAME = u'Louis Tiao'
 SITEURL = ''
 
-SITESUBTITLE = u'Computer Science &middot; Math &middot; Programming'
+# SITESUBTITLE = u'Math &middot; Computer Science &middot; Programming'
 
 PATH = 'content'
 
@@ -24,19 +24,20 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Jinja2', 'http://jinja.pocoo.org/'),)
+
+# LINKS = [('A long Link title for link #{0}'.format(i), '#') for i in xrange(20)]
 
 # Social widget
 SOCIAL = (
-	('Github', 'https://github.com/ltiao', 'github'),
-	('Linkedin', 'https://www.linkedin.com/in/ltiao', 'linkedin'),
-	('Twitter', 'https://twitter.com/louistiao', 'twitter'),
-	('Facebook', 'https://www.facebook.com/louis.tiao', 'facebook'),
-	('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01ZGES3iSWmUwr35sEbB8-VA==&c=PeD7vZlw1_DRu8fsayKDuVdVl_rtu18xfsGBgyvNXwc=', 'envelope')
+	('Github', 'https://github.com/ltiao'),
+	('Linkedin', 'https://www.linkedin.com/in/ltiao'),
+	('Twitter', 'https://twitter.com/louistiao'),
+	('Facebook', 'https://www.facebook.com/louis.tiao'),
+	('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01ZGES3iSWmUwr35sEbB8-VA==&c=PeD7vZlw1_DRu8fsayKDuVdVl_rtu18xfsGBgyvNXwc='),
+	('Google Plus', '#'),
+	('Instagram', '#'),
 )
-
-# SOCIAL = [(a, b) for a, b, _ in SOCIAL]
 
 DEFAULT_PAGINATION = 5
 
@@ -54,8 +55,12 @@ GITHUB_URL = 'https://github.com/ltiao'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+TYPOGRIFY = True
+
+# PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc']
+PLUGINS = ['extract_toc', 'render_math']
 
 THEME = 'themes/tiao-pelican'
 

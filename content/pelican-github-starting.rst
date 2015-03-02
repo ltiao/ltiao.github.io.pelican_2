@@ -1,13 +1,12 @@
-==============================================
-Hosting Pelican site on Github: Best practices
-==============================================
+===============================================
+Hosting Pelican site on Github the Right Way(s)
+===============================================
 
 :date: 2010-10-03 10:20
 :modified: 2010-10-04 18:40
-:tags: thats, awesome
-:category: Research
-:slug: my-super-post
-:authors: Alexis Metaireau, Conan Doyle
+:tags: pelican, github, 
+:category: Python
+:authors: Louis Tiao
 
 Starting out
 ============
@@ -100,7 +99,7 @@ Approach #1: The Octopress Approach
 Approach #2: Git Submodule
 --------------------------
 
-S
+*Coming soon*
 
 .. _article: https://help.github.com/articles/user-organization-and-project-pages/
              #user--organization-pages
