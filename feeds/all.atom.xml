@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-03-03T00:30:00+01:00</updated><entry><title>Synopsis: Autoloading modules in IPython</title><link href="http://ltiao.github.io/synopsis-autoloading-modules-in-ipython.html" rel="alternate"></link><updated>2015-03-03T00:30:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-03-03:synopsis-autoloading-modules-in-ipython.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Louis Tiao</title><link href="http://ltiao.github.io/" rel="alternate"></link><link href="http://ltiao.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ltiao.github.io/</id><updated>2015-03-03T23:30:00+01:00</updated><entry><title>Synopsis: Pelican’s USE_FOLDER_AS_CATEGORY</title><link href="http://ltiao.github.io/synopsis-pelicans-use_folder_as_category.html" rel="alternate"></link><updated>2015-03-03T23:30:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-03-03:synopsis-pelicans-use_folder_as_category.html</id><summary type="html">&lt;p&gt;Pelican&amp;#8217;s &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#basic-settings"&gt;USE_FOLDER_AS_CATEGORY&lt;/a&gt; setting is set to &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; by default.
+If you place an article within a subfolder of the content folder, and don&amp;#8217;t
+specify a category in your article metadata, then the name of the subfolder
+will be the category of your article. However, the documentation does not
+specify Pelican&amp;#8217;s behavior under all possible situations. E.g. What happens
+if an article is within a subfolder, and its category is specified but different
+the name of the&amp;nbsp;subfolder?&lt;/p&gt;
+&lt;p&gt;We summarize Pelican&amp;#8217;s behavior under all possible circumstances&amp;nbsp;here.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="30%" /&gt;
+&lt;col width="21%" /&gt;
+&lt;col width="26%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;&lt;tt class="docutils literal"&gt;USE_FOLDER_AS_CATEGORY&lt;/tt&gt;&lt;/th&gt;
+&lt;th class="head"&gt;Category &lt;em&gt;c&lt;/em&gt; specified in metadata&lt;/th&gt;
+&lt;th class="head"&gt;Article in subfolder &lt;em&gt;d&lt;/em&gt;&lt;/th&gt;
+&lt;th class="head"&gt;Article&amp;#8217;s Category&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;c&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;c&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;d&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;DEFAULT_CATEGORY&lt;/tt&gt; (&lt;em&gt;Misc&lt;/em&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;c&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;c&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;True&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;DEFAULT_CATEGORY&lt;/tt&gt; (&lt;em&gt;Misc&lt;/em&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;False&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;&lt;tt class="docutils literal"&gt;DEFAULT_CATEGORY&lt;/tt&gt; (&lt;em&gt;Misc&lt;/em&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</summary><category term="python"></category><category term="pelican"></category><category term="synopsis"></category></entry><entry><title>Synopsis: Autoloading modules in IPython</title><link href="http://ltiao.github.io/synopsis-autoloading-modules-in-ipython.html" rel="alternate"></link><updated>2015-03-03T00:30:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-03-03:synopsis-autoloading-modules-in-ipython.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 In [1]: %load_ext autoreload
 In [2]: %autoreload 2
@@ -9,13 +74,81 @@ In [2]: %autoreload 2
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://ipython.org/ipython-doc/dev/config/extensions/autoreload.html#module-IPython.extensions.autoreload"&gt;http://ipython.org/ipython-doc/dev/config/extensions/autoreload.html#module-IPython.extensions.autoreload&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="python"></category><category term="ipython"></category><category term="synopsis"></category></entry><entry><title>Synopsis: Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/synopsis-upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:synopsis-upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
+</summary><category term="python"></category><category term="ipython"></category><category term="synopsis"></category></entry><entry><title>Quotes</title><link href="http://ltiao.github.io/quotes.html" rel="alternate"></link><updated>2015-03-03T18:40:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-03-02:quotes.html</id><summary type="html">&lt;div class="section" id="motivation"&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;blockquote class="pull-quote"&gt;
+&lt;p&gt;Success isn&amp;#8217;t owned, it is leased. And rent is due every&amp;nbsp;day.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;span class="caps"&gt;J.J.&lt;/span&gt;&amp;nbsp;Watt&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class="pull-quote"&gt;
+I may not be there yet, but I&amp;#8217;m closer than I was yesterday.&lt;/blockquote&gt;
+&lt;blockquote class="pull-quote"&gt;
+What hurts more, the pain of hard work or the pain of regret?&lt;/blockquote&gt;
+&lt;blockquote class="pull-quote"&gt;
+&lt;p&gt;Whenever you don&amp;#8217;t feel like doing something is probably you need
+to be doing it the&amp;nbsp;most.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;Friend of &lt;a class="reference external" href="http://www.reddit.com/user/masterofjello981"&gt;/u/masterofjello981&lt;/a&gt;
+on &lt;a class="reference external" href="http://www.reddit.com/r/GetMotivated/comments/27lggi/asked_a_friend_for_practicing_tips_hit_me_with_a/"&gt;/r/GetMotivated&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class="pull-quote"&gt;
+&lt;p&gt;Never give up on a dream because of the time it will take to accomplish it.
+The time will pass&amp;nbsp;anyway.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;Earl&amp;nbsp;Nightingale&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class="pull-quote"&gt;
+&lt;p&gt;If I quit now, I will soon be back to where I&amp;nbsp;started.&lt;/p&gt;
+&lt;p&gt;And when I started, I was desperately wishing to be where I am&amp;nbsp;now.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+</summary><category term="motivation"></category><category term="quotes"></category></entry><entry><title>Synopsis: Upgrading all outdated pip packages</title><link href="http://ltiao.github.io/synopsis-upgrading-all-outdated-pip-packages.html" rel="alternate"></link><updated>2015-02-05T20:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-02-05:synopsis-upgrading-all-outdated-pip-packages.html</id><summary type="html">&lt;p&gt;Simply&amp;nbsp;execute:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ pip list --outdated | cut -d' ' -f1 | xargs pip install --upgrade
 &lt;/pre&gt;
 &lt;p&gt;for versions of &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; that has the &lt;tt class="docutils literal"&gt;list&lt;/tt&gt; command, which I believe
 is&amp;nbsp;1.3+.&lt;/p&gt;
-</summary><category term="pip"></category><category term="python"></category><category term="synopsis"></category></entry><entry><title>Hosting Pelican site on Github the Right Way(s)</title><link href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html" rel="alternate"></link><updated>2010-10-04T18:40:00+02:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2010-10-03:hosting-pelican-site-on-github-the-right-ways.html</id><summary type="html">&lt;div class="section" id="starting-out"&gt;
+</summary><category term="pip"></category><category term="python"></category><category term="synopsis"></category></entry><entry><title>Generate PDFs from Pelican Articles</title><link href="http://ltiao.github.io/generate-pdfs-from-pelican-articles.html" rel="alternate"></link><updated>2015-01-28T00:00:00+01:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2015-01-26:generate-pdfs-from-pelican-articles.html</id><summary type="html">&lt;p&gt;As of mid-2013, Pelican still advertised &lt;span class="caps"&gt;PDF&lt;/span&gt; generation of articles/pages
+as one of its &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features"&gt;features&lt;/a&gt;. However, the &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3"&gt;change log&lt;/a&gt; indicates that this
+is no longer a core feature and has since become a Pelican plugin as of
+version 3.3.0 (2013-09-24), see &lt;a class="reference external" href="https://github.com/getpelican/pelican/issues/1009"&gt;issue&lt;/a&gt; for further discussion. Therefore, it was
+rather confounding to find the setting &lt;tt class="docutils literal"&gt;PDF_GENERATOR&lt;/tt&gt; to be listed in the
+&lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings"&gt;examples settings&lt;/a&gt; of version 3.5.0, and of course, to no one&amp;#8217;s surprise,
+adding the setting &lt;tt class="docutils literal"&gt;PDF_GENERATOR=True&lt;/tt&gt; isn&amp;#8217;t going to do&amp;nbsp;anything.&lt;/p&gt;
+&lt;p&gt;If you have used &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html"&gt;Pelican plugins&lt;/a&gt; before, then the solution should be obvious.
+Simply install the &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt; plugin from &lt;a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html"&gt;Pelican plugins&lt;/a&gt;. I personally
+prefer to keep all plugins (and themes) in the &lt;tt class="docutils literal"&gt;&amp;lt;pelican_site_root&amp;gt;&lt;/tt&gt; directory,
+on the same level as the &lt;tt class="docutils literal"&gt;pelicanconf.py&lt;/tt&gt; settings&amp;nbsp;file:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd &amp;lt;pelican_site_root&amp;gt;
+$ mkdir plugins
+$ git clone https://github.com/getpelican/pelican-plugins.git plugins
+&lt;/pre&gt;
+&lt;p&gt;Optionally, you can also add the repository as a&amp;nbsp;submodule:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
+&lt;/pre&gt;
+&lt;p&gt;or clone it anywhere else you like for that&amp;nbsp;matter.&lt;/p&gt;
+&lt;p&gt;Lastly, you simply need to add &lt;tt class="docutils literal"&gt;plugins&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;PLUGIN_PATHS&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt;
+to &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;PLUGINS&lt;/span&gt;&lt;/tt&gt;. The former will temporarily add &lt;tt class="docutils literal"&gt;PLUGIN_PATHS&lt;/tt&gt; to your
+system path so that the latter is&amp;nbsp;importable:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['pdf']
+&lt;/pre&gt;
+&lt;p&gt;When you run &lt;tt class="docutils literal"&gt;pelican&lt;/tt&gt; (or &lt;tt class="docutils literal"&gt;make html&lt;/tt&gt;), the generated PDFs of your articles
+will appear in the &lt;tt class="docutils literal"&gt;pdf&lt;/tt&gt; directory of the output directory, named according
+to the article slug with the &lt;tt class="docutils literal"&gt;.pdf&lt;/tt&gt; extension.&lt;/p&gt;
+&lt;p&gt;In my opinion, the generated PDFs aren&amp;#8217;t exactly terrific, and the plugin could
+do with a little bit more work. Download this article as a &lt;span class="caps"&gt;PDF&lt;/span&gt; to see what I
+mean (how&amp;nbsp;meta!)&lt;/p&gt;
+&lt;!-- Download the `PDF of this article`_ to see what I mean (how meta!) --&gt;
+&lt;div class="note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;If you happen to be using the &lt;tt class="docutils literal"&gt;notmyidea&lt;/tt&gt; theme, a link &lt;em&gt;get the pdf&lt;/em&gt;
+will appear by simply adding &lt;tt class="docutils literal"&gt;PDF_PROCESSOR=True&lt;/tt&gt; to your settings
+(as of &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html"&gt;commit a7ca52&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf --&gt;
+</summary><category term="pelican"></category><category term="pdf"></category></entry><entry><title>Hosting Pelican site on Github: The Right Way(s)</title><link href="http://ltiao.github.io/hosting-pelican-site-on-github-the-right-ways.html" rel="alternate"></link><updated>2010-10-04T18:40:00+02:00</updated><author><name>Louis Tiao</name></author><id>tag:ltiao.github.io,2010-10-03:hosting-pelican-site-on-github-the-right-ways.html</id><summary type="html">&lt;div class="section" id="starting-out"&gt;
 &lt;h2&gt;Starting&amp;nbsp;out&lt;/h2&gt;
 &lt;ol class="arabic"&gt;
 &lt;li&gt;&lt;p class="first"&gt;Create a new git repository at Github: &lt;a class="reference external" href="https://github.com/new"&gt;https://github.com/new&lt;/a&gt;&lt;/p&gt;

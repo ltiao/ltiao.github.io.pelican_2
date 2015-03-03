@@ -65,6 +65,16 @@
   </a>
 </li>
 <li role="presentation" >
+  <a href="http://ltiao.github.io/pages/contact.html">
+    <span>Contact</span>
+  </a>
+</li>
+<li role="presentation" >
+  <a href="http://ltiao.github.io/pages/curriculum-vitae.html">
+    <span>Curriculum&nbsp;Vitae</span>
+  </a>
+</li>
+<li role="presentation" >
   <a href="http://ltiao.github.io/pages/projects.html">
     <span>Projects</span>
   </a>
@@ -80,21 +90,24 @@
       </strong>
     </a>
   </li>
+  <li >
+    <a href="http://ltiao.github.io/category/misc.html">Misc</a>
+  </li>
   <li class="active">
     <a href="http://ltiao.github.io/category/python.html">Python</a>
   </li>
 </ul> <!-- /nav -->
 <hr>
 <div class="well">
-  drafts/generate-pdfs-from-pelican-articles.html
+  synopsis-pelicans-use_folder_as_category.html
 </div> <!-- /well -->        </div> <!-- /col -->
         <div class="col-sm-9 col-md-10">
 <ul class="list-group">
   <li class="list-group-item">
 <h2 class="list-group-item-heading">
-  <a href="http://ltiao.github.io/drafts/generate-pdfs-from-pelican-articles.html" rel="bookmark"
-     title="Permalink to Generate PDFs from Pelican Articles">
-  Generate PDFs from Pelican&nbsp;Articles
+  <a href="http://ltiao.github.io/synopsis-pelicans-use_folder_as_category.html" rel="bookmark"
+     title="Permalink to Synopsis: Pelican’s USE_FOLDER_AS_CATEGORY">
+  Synopsis: Pelican&#8217;s <tt class="docutils literal">USE_FOLDER_AS_CATEGORY</tt>
   </a>
 </h2>
 
@@ -106,19 +119,13 @@
   <li>
     <abbr title="Published">
       <i class="fa fa-calendar"></i>
-      Mon 26 January 2015
-    </abbr>
-  </li>
-  <li>
-    <abbr title="Last modified">
-      <i class="fa fa-edit"></i>
-      Wed 28 January 2015
+      Tue 03 March 2015
     </abbr>
   </li>
   <li>
     <i class="fa fa-comments"></i>
-    <a href="http://ltiao.github.io/drafts/generate-pdfs-from-pelican-articles.html#disqus_thread"
-       data-disqus-identifier="article-generate-pdfs-from-pelican-articles-01-2015">
+    <a href="http://ltiao.github.io/synopsis-pelicans-use_folder_as_category.html#disqus_thread"
+       data-disqus-identifier="article-synopsis-pelicans-use_folder_as_category-03-2015">
       Leave a comment
     </a>
   </li>
@@ -129,53 +136,99 @@
   
 
 <div class="list-group-item-text content-body">
-  <p>As of mid-2013, Pelican still advertised <span class="caps">PDF</span> generation of articles/pages
-as one of its <a class="reference external" href="https://github.com/getpelican/pelican/blob/8be7c0dbae5bd094379d74fd47acb41a56f18afd/docs/index.rst#features">features</a>. However, the <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/changelog.html#id3">change log</a> indicates that this
-is no longer a core feature and has since become a Pelican plugin as of
-version 3.3.0 (2013-09-24), see <a class="reference external" href="https://github.com/getpelican/pelican/issues/1009">issue</a> for further discussion. Therefore, it was
-rather confounding to find the setting <tt class="docutils literal">PDF_GENERATOR</tt> to be listed in the
-<a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#example-settings">examples settings</a> of version 3.5.0, and of course, to no one&#8217;s surprise,
-adding the setting <tt class="docutils literal">PDF_GENERATOR=True</tt> isn&#8217;t going to do&nbsp;anything.</p>
-<p>If you have used <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a> before, then the solution should be obvious.
-Simply install the <tt class="docutils literal">pdf</tt> plugin from <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/plugins.html">Pelican plugins</a>. I personally
-prefer to keep all plugins (and themes) in the <tt class="docutils literal">&lt;pelican_site_root&gt;</tt> directory,
-on the same level as the <tt class="docutils literal">pelicanconf.py</tt> settings&nbsp;file:</p>
-<pre class="literal-block">
-$ cd &lt;pelican_site_root&gt;
-$ mkdir plugins
-$ git clone https://github.com/getpelican/pelican-plugins.git plugins
-</pre>
-<p>Optionally, you can also add the repository as a&nbsp;submodule:</p>
-<pre class="literal-block">
-$ git submodule add https://github.com/getpelican/pelican-plugins.git plugins
-</pre>
-<p>or clone it anywhere else you like for that&nbsp;matter.</p>
-<p>Lastly, you simply need to add <tt class="docutils literal">plugins</tt> to <tt class="docutils literal">PLUGIN_PATHS</tt> and <tt class="docutils literal">pdf</tt>
-to <tt class="docutils literal"><span class="caps">PLUGINS</span></tt>. The former will temporarily add <tt class="docutils literal">PLUGIN_PATHS</tt> to your
-system path so that the latter is&nbsp;importable:</p>
-<pre class="literal-block">
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pdf']
-</pre>
-<p>When you run <tt class="docutils literal">pelican</tt> (or <tt class="docutils literal">make html</tt>), the generated PDFs of your articles
-will appear in the <tt class="docutils literal">pdf</tt> directory of the output directory, named according
-to the article slug with the <tt class="docutils literal">.pdf</tt> extension.</p>
-<p>In my opinion, the generated PDFs aren&#8217;t exactly terrific, and the plugin could
-do with a little bit more work. Download this article as a <span class="caps">PDF</span> to see what I
-mean (how&nbsp;meta!)</p>
-<!-- Download the `PDF of this article`_ to see what I mean (how meta!) -->
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you happen to be using the <tt class="docutils literal">notmyidea</tt> theme, a link <em>get the pdf</em>
-will appear by simply adding <tt class="docutils literal">PDF_PROCESSOR=True</tt> to your settings
-(as of <a class="reference external" href="https://github.com/getpelican/pelican/blob/a7ca52dee05819be269b95556da01f965d107a50/pelican/themes/notmyidea/templates/taglist.html">commit a7ca52</a>).</p>
-</div>
-<!-- .. _PDF of this article: /pdf/generate-pdfs-from-pelican-articles.pdf -->
+  <p>Pelican&#8217;s <a class="reference external" href="http://docs.getpelican.com/en/3.5.0/settings.html#basic-settings">USE_FOLDER_AS_CATEGORY</a> setting is set to <tt class="docutils literal">True</tt> by default.
+If you place an article within a subfolder of the content folder, and don&#8217;t
+specify a category in your article metadata, then the name of the subfolder
+will be the category of your article. However, the documentation does not
+specify Pelican&#8217;s behavior under all possible situations. E.g. What happens
+if an article is within a subfolder, and its category is specified but different
+the name of the&nbsp;subfolder?</p>
+<p>We summarize Pelican&#8217;s behavior under all possible circumstances&nbsp;here.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="30%" />
+<col width="21%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><tt class="docutils literal">USE_FOLDER_AS_CATEGORY</tt></th>
+<th class="head">Category <em>c</em> specified in metadata</th>
+<th class="head">Article in subfolder <em>d</em></th>
+<th class="head">Article&#8217;s Category</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><em>c</em></td>
+</tr>
+<tr><td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><em>c</em></td>
+</tr>
+<tr><td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><em>d</em></td>
+</tr>
+<tr><td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">DEFAULT_CATEGORY</tt> (<em>Misc</em>)</td>
+</tr>
+<tr><td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><em>c</em></td>
+</tr>
+<tr><td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><em>c</em></td>
+</tr>
+<tr><td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">DEFAULT_CATEGORY</tt> (<em>Misc</em>)</td>
+</tr>
+<tr><td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">DEFAULT_CATEGORY</tt> (<em>Misc</em>)</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
   </li>
   <li class="list-group-item">
+<div class="comments">
+	<h3>Comments</h3>
+	<div id="disqus_thread"></div>
+
+
+	<script type="text/javascript">
+    var disqus_shortname = 'ltiao';
+    var disqus_identifier = 'article-synopsis-pelicans-use_folder_as_category-03-2015';
+    var disqus_url = 'http://ltiao.github.io/synopsis-pelicans-use_folder_as_category.html';
+
+	  var disqus_config = function () {
+	      this.language = "en";
+	  };
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
+</div>
   </li>
 </ul>
         </div> <!-- /col -->
