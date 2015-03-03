@@ -1,11 +1,10 @@
-===============================================
-Hosting Pelican site on Github the Right Way(s)
-===============================================
+================================================
+Hosting Pelican site on Github: The Right Way(s)
+================================================
 
 :date: 2010-10-03 10:20
 :modified: 2010-10-04 18:40
 :tags: pelican, github, 
-:category: Python
 :authors: Louis Tiao
 
 Starting out

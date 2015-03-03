@@ -2,4 +2,4 @@
 Curriculum Vitae
 ================
 
-:status: hidden
+*Coming Soon*

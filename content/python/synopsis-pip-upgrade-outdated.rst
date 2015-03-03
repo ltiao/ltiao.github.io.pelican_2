@@ -1,10 +1,9 @@
-===================================
-Upgrading all outdated pip packages
-===================================
+=============================================
+Synopsis: Upgrading all outdated pip packages
+=============================================
 
 :date: 2015-02-05 20:00
-:tags: pip, python, recipe
-:category: Python
+:tags: pip, python, synopsis
 :authors: Louis Tiao
 
 Simply execute::

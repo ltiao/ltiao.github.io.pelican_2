@@ -60,7 +60,9 @@ TYPOGRIFY = True
 # PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc', 'render_math']
+PLUGINS = ['extract_toc', 'render_math', 'liquid_tags.notebook']
+
+# USE_FOLDER_AS_CATEGORY = False
 
 THEME = 'themes/tiao-pelican'
 
