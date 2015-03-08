@@ -71,3 +71,5 @@ BOOTSTRAP_THEME = 'yeti'
 
 BOOTSTRAP_USE_PAGER = True
 # BOOTSTRAP_FLAT = True
+
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
